@@ -16,3 +16,14 @@ body {
     /* background: linear-gradient(to bottom right,rgba(2, 38, 144, 1) 20%, rgba(132, 197, 197, 1)); */
     margin: auto;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* header */
+
+h1 {
+    margin: 10vh 0;
+}
