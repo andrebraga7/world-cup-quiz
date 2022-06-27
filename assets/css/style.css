@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    background: radial-gradient(circle,rgb(3, 76, 174), rgb(2, 18, 100));
+    /* background: linear-gradient(to bottom right,rgba(2, 38, 144, 1) 20%, rgba(132, 197, 197, 1)); */
+    margin: auto;
+}
