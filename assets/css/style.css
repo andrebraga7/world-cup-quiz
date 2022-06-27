@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
 }
 
 body {
-    font-family: 'Orbitron', sans-serif;
     color: white;
     text-align: center;
-    height: 100vh;
+    /* height: 100vh; */
     background: radial-gradient(circle,rgb(3, 76, 174), rgb(2, 18, 100));
-    /* background: linear-gradient(to bottom right,rgba(2, 38, 144, 1) 20%, rgba(132, 197, 197, 1)); */
     margin: auto;
 }
 
@@ -24,6 +23,49 @@ a {
 
 /* header */
 
-h1 {
+header {
     margin: 10vh 0;
+}
+
+/* main quiz area */
+
+.quiz-area {
+    height: 60vh;
+    width: 60vw;
+    margin: auto;
+    color: #2b2b2b;
+    border: solid 1px navy;
+    border-radius: 20px;
+    background-color: #fafafa;
+}
+
+.quiz-area h2 {
+    padding: 10vh 0;
+}
+
+#username {
+    display: block;
+    margin: 3vh auto;
+    height: 50px;
+    width: 250px;
+    padding: 5px 10px;
+    border: solid 3px purple;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* buttons */
+
+.btn-green {
+    background-color: green;
+    color: white;
+    font-size: 1em;
+    font-weight: 700;
+    height: 50px;
+    width: 250px;
+}
+
+.btn-green:hover {
+    border: solid 1px black;
+    box-shadow: 3px 3px black;
 }
