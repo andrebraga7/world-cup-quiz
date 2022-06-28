@@ -64,6 +64,30 @@ header > h1 > i {
     padding-right: 21vw;
 }
 
+/* instructions */
+
+#instructions {
+    visibility: hidden;
+    width: 50vw;
+    height: 60vh;
+    position: absolute;
+    top: 20vh;
+    left: 25vw;
+    z-index: 1;
+    color: #2b2b2b;
+    padding: 5vh 2.5vw;
+    background: #fafafa;
+    border: solid 5px purple;
+}
+
+#instructions h2, p {
+    padding: 0 0 2vh;
+}
+
+#instructions ul {
+    list-style: none;
+}
+
 /* footer */
 
 footer {
@@ -74,7 +98,7 @@ footer {
 
 footer a {
     font-size: 1.5em;
-    padding-left: 3vw;
+    padding-left: 2vw;
 }
 
 /* buttons */
