@@ -1,22 +1,60 @@
 // Wait for the DOM to finish loading before proceeding
 // Add event listeners to the initial buttons
 
-document.addEventListener('DOMContentLoaded', controls());
+document.addEventListener('DOMContentLoaded', controls);
 
-function controls();
+/** 
+ * The function that is called when the DOM finishes loading
+ * adds event listeners to the four initial buttons
+*/
+function controls() {
+    let buttons = document.getElementsByTagName('button');
 
-function soundButton();
+    for (let button of buttons) {
+        button.addEventListener('click', function() {
+            let id = this.getAttribute('id');
+            switch(id) {
+                case 'submit':
+                    chooseLevel();
+                    break;
+                case 'sound-btn':
+                    soundButton();
+                    break;
+                case 'instructions-btn':
+                    instructionsButton();
+                    break;
+                case 'instructions-close':
+                    instructionsCloseButton();
+                    break;
+                default:
+                    throw 'Unknown button';
+            }
+        })
+    }
+}
 
-function instructionsButton();
+function soundButton() {
+    console.log('sound-btn');
+}
 
-function chooseLevel();
+function instructionsButton() {
+    console.log('instructions-btn');
+}
 
-function runQuiz();
+function instructionsCloseButton() {
+    console.log('instructions-close');
+}
 
-function checkAnswer();
+function chooseLevel() {
+    console.log('submit');
+}
 
-function incrementScore();
+function runQuiz() {}
 
-function nextRound();
+function checkAnswer() {}
 
-function endQuiz();
+function incrementScore() {}
+
+function nextRound() {}
+
+function endQuiz() {}
