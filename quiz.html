@@ -22,10 +22,19 @@
     <!-- main quiz area with a div -->
     <main>
         <div class="quiz-area">
-            <h2>${user} select your level of difficulty!</h2>
-            <button id="friendly-match" class="btn-green">Friendly match</button>
-            <br>
-            <button id="cup-final" class="btn-green">Cup final</button>
+            <div id="game-info">
+                <div><span id="user">${user}</span></div>
+                <div><span>Score: </span><span id="score">0</span></div>
+                <div><span>Round: </span><span id="round">1</span><span> / 7</span></div>
+            </div>
+            <p id="question">A random generated question from the database?</p>
+            <div id="answers">
+                <button class="btn-answer" id="answer1">First answer</button>
+                <button class="btn-answer" id="answer2">Second answer</button>
+                <button class="btn-answer" id="answer3">Third answer</button>
+                <button class="btn-answer" id="answer4">Fourth answer</button>
+            </div>
+            <button id="next">Next round</button>
         </div>
     </main>
 
@@ -33,7 +42,7 @@
     <footer>
         <span>© 2022 Andre Braga</span>
         <a href="https://www.linkedin.com/in/andrestrevisan/" target="_blank" rel="noopener" aria-label="Linkedin link opens in new tab"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/andrebraga7" target="_blank" rel="noopener" aria-label="Github link opens in new tab"><i class="fa-brands fa-github"></i></a>
+        <a href="https://github.com/andrebraga7" target="_blank" rel="noopener" aria-label="Github link opens in new tab"><i class="fa-brands fa-github"></i></a>    
     </footer>
 
     <!-- font awsome script-->
