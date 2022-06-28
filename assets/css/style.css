@@ -32,7 +32,7 @@ header > h1 > i {
 
 /* main quiz area */
 
-.quiz-area {
+#quiz-area {
     height: 60vh;
     width: 60vw;
     margin: auto;
@@ -42,7 +42,7 @@ header > h1 > i {
     background-color: #fafafa;
 }
 
-.quiz-area > h2 {
+#quiz-area > h2 {
     padding: 10vh 0;
 }
 

@@ -38,19 +38,31 @@ function controls() {
 }
 
 function soundButton() {
-    console.log('sound-btn');
+
+    let icon = document.getElementById('sound-btn');
+
+    if (icon.value == 'on') {
+        icon.innerHTML = `<i class="fa-solid fa-volume-xmark"></i>`;
+        icon.value = "off";
+    } else {
+        icon.innerHTML = `<i class="fa-solid fa-volume-high"></i>`;
+        icon.value = "on";
+    }
+
 }
 
 function instructionsButton() {
 
     let instructions = document.getElementById('instructions');
     instructions.style.visibility = "visible";
+
 }
 
 function instructionsCloseButton() {
 
     let instructions = document.getElementById('instructions');
     instructions.style.visibility = "hidden";
+
 }
 
 /**
@@ -64,7 +76,13 @@ function chooseLevel() {
     if (user == '') {
         document.getElementById('empty-username').style.visibility = "visible";
     } else {
-        console.log(user);
+        let quizArea = document.getElementById('quiz-area');
+        quizArea.innerHTML = `
+        <h2>${user}, select your level of difficulty!</h2>
+        <button id="friendly-match" class="btn-green">Friendly match</button>
+        <br>
+        <button id="cup-final" class="btn-green">Cup final</button>
+        `;
     }
 }
 
