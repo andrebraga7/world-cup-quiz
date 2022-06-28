@@ -101,6 +101,34 @@ footer a {
     padding-left: 2vw;
 }
 
+/* style for the run quiz html */
+
+#game-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 3vh 0;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+#question {
+    padding: 5vh 0;
+    font-size: 1.2em;
+}
+
+/* style for the end game html */
+
+#result {
+    padding-bottom: 5vh;
+}
+
+#result i {
+    padding: 0 0 3vh;
+    color: gold;
+    font-size: 4em;
+}
+
 /* buttons */
 
 .btn-green {
@@ -161,30 +189,8 @@ footer a {
     box-shadow: 3px 3px black;
 }
 
-/* style for the run quiz html */
-
-#game-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 3vh 0;
-    font-size: 1em;
-    font-weight: 700;
-}
-
-#question {
-    padding: 5vh 0;
-    font-size: 1.2em;
-}
-
-/* style for the end game html */
-
-#result {
-    padding-bottom: 5vh;
-}
-
-#result i {
-    padding: 0 0 3vh;
-    color: gold;
-    font-size: 4em;
+#instructions-close {
+    position: absolute;
+    top: 4px;
+    right: 4px;
 }
