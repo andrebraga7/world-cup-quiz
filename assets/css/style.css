@@ -48,13 +48,19 @@ header > h1 > i {
 
 #username {
     display: block;
-    margin: 3vh auto;
+    margin: 3vh auto 0;
     height: 50px;
     width: 250px;
     padding: 5px 10px;
     border: solid 3px purple;
     text-align: center;
     font-size: 1em;
+}
+
+#empty-username {
+    visibility: hidden;
+    color: red;
+    padding: 0;
 }
 
 /* controls */

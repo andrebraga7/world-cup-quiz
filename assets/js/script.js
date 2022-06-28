@@ -53,8 +53,19 @@ function instructionsCloseButton() {
     instructions.style.visibility = "hidden";
 }
 
+/**
+ * Get the username and if empty display a warning message,
+ * if username is completed load the choose level template literals.
+ */
 function chooseLevel() {
-    console.log('submit');
+
+    let user = document.getElementById('username').value;
+    
+    if (user == '') {
+        document.getElementById('empty-username').style.visibility = "visible";
+    } else {
+        console.log(user);
+    }
 }
 
 function runQuiz() {}
