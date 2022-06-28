@@ -23,7 +23,7 @@ a {
 /* header */
 
 header {
-    margin: 10vh 0;
+    margin: 9vh 0;
 }
 
 header > h1 > i {
@@ -55,6 +55,26 @@ header > h1 > i {
     border: solid 3px purple;
     text-align: center;
     font-size: 1em;
+}
+
+/* controls */
+
+#controls {
+    text-align: right;
+    padding-right: 21vw;
+}
+
+/* footer */
+
+footer {
+    position: fixed;
+    bottom: 2vh;
+    width: 100%;
+}
+
+footer a {
+    font-size: 1.5em;
+    padding-left: 3vw;
 }
 
 /* buttons */
@@ -103,23 +123,18 @@ header > h1 > i {
     box-shadow: 3px 3px black;
 }
 
-/* controls */
-
-#controls {
-    padding: 1vh 0;
+.btn-controls {
+    font-size: 1em;
+    color: white;
+    background: purple;
+    border: solid 2px black;
+    padding: 0.3vh 2vw;
 }
 
-/* footer */
-
-footer {
-    position: fixed;
-    bottom: 2vh;
-    width: 100%;
-}
-
-footer a {
-    font-size: 1.5em;
-    padding-left: 3vw;
+.btn-controls:hover {
+    color: purple;
+    background: white;
+    box-shadow: 3px 3px black;
 }
 
 /* style for the run quiz html */
