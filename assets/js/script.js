@@ -84,6 +84,7 @@ function chooseLevel() {
         <button id="cup-final" class="btn-green">Cup final</button>
         `;
     }
+    
 }
 
 function runQuiz() {}
