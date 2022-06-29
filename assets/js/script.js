@@ -37,6 +37,13 @@ function controls() {
     }
 }
 
+// Global variable for the quiz area.
+var quizArea = document.getElementById('quiz-area');
+
+/**
+ * Changes the sound button icon from ON to OFF
+ * and stops playing sound in the DOM back and forth.
+ */
 function soundButton() {
 
     let icon = document.getElementById('sound-btn');
@@ -51,6 +58,9 @@ function soundButton() {
 
 }
 
+/**
+ * Open the instructions.
+ */
 function instructionsButton() {
 
     let instructions = document.getElementById('instructions');
@@ -58,6 +68,9 @@ function instructionsButton() {
 
 }
 
+/**
+ * Close the instructions.
+ */
 function instructionsCloseButton() {
 
     let instructions = document.getElementById('instructions');
@@ -76,7 +89,6 @@ function chooseLevel() {
     if (user == '') {
         document.getElementById('empty-username').style.visibility = "visible";
     } else {
-        let quizArea = document.getElementById('quiz-area');
         quizArea.innerHTML = `
         <h2>${user}, select your level of difficulty!</h2>
         <button id="friendly-match" class="btn-green">Friendly match</button>
@@ -84,7 +96,7 @@ function chooseLevel() {
         <button id="cup-final" class="btn-green">Cup final</button>
         `;
     }
-    
+
 }
 
 function runQuiz() {}
