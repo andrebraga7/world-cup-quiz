@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', controls);
  * adds event listener to the four initial buttons.
 */
 function controls() {
+
     let buttons = document.getElementsByTagName('button');
 
     for (let button of buttons) {
@@ -46,7 +47,7 @@ function controls() {
 }
 
 // Global variable for the quiz area.
-var quizArea = document.getElementById('quiz-area');
+let quizArea = document.getElementById('quiz-area');
 
 /**
  * Changes the sound button icon from ON to OFF
@@ -99,28 +100,56 @@ function chooseLevel() {
     } else {
         quizArea.innerHTML = `
         <h2>${user}, select your level of difficulty!</h2>
-        <button id="group-stage" data-type="level-selection" class="btn-green">Group stage</button>
+        <button data-level="group-stage" class="btn-green">Group stage</button>
         <br>
-        <button id="cup-final" data-type="level-selection" class="btn-green">Cup final</button>
+        <button data-level="cup-final" class="btn-green">Cup final</button>
         `;
     }
 
-    // Add event listeners only to the level buttons.
-    let buttons = document.getElementsByTagName('button');
+    // Add event listeners only to the level selection buttons
+    // and pass user and level to the runQuiz().
+    let levelButtons = document.querySelectorAll('[data-level');
 
-    for (let button of buttons) {
-        if (button.getAttribute('data-type') === 'level-selection') {
-            this.addEventListener('click', runQuiz);
-        }
+    for (let button of levelButtons) {
+        button.addEventListener('click', function() {
+            let level = this.getAttribute('data-level');
+            runQuiz(user, level);
+        });
     }
 
 }
 
-function runQuiz() {
+function runQuiz(user, level) {
 
-    
-    console.log('running');
+    let score = 0;
+    let round = 0;
+    let question = "A random question from an Array?"
+    let answer = [1,2,3,4];
 
+    quizArea.innerHTML = `
+    <div id="game-info">
+        <div><span>${user}</span></div>
+        <div><span>Score: ${score} </span></div>
+        <div><span>Round: ${round} / 7</span></div>
+    </div>
+    <p id="question">${question}</p>
+    <div id="answers">
+        <button class="btn-answer" id="answer1">${answer[0]}</button>
+        <button class="btn-answer" id="answer2">${answer[1]}</button>
+        <button class="btn-answer" id="answer3">${answer[2]}</button>
+        <button class="btn-answer" id="answer4">${answer[3]}</button>
+    </div>
+    <button id="next">Next round</button>
+    `;
+
+}
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
 
 function checkAnswer() {}
