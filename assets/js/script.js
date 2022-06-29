@@ -35,6 +35,14 @@ function controls() {
             }
         })
     }
+
+    // Event listener for the enter key on the username input field.
+    document.getElementById('username').addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            chooseLevel();
+        }
+    })
+
 }
 
 // Global variable for the quiz area.
@@ -91,7 +99,7 @@ function chooseLevel() {
     } else {
         quizArea.innerHTML = `
         <h2>${user}, select your level of difficulty!</h2>
-        <button id="friendly-match" class="btn-green">Friendly match</button>
+        <button id="group-stage" class="btn-green">Group stage</button>
         <br>
         <button id="cup-final" class="btn-green">Cup final</button>
         `;
@@ -99,7 +107,9 @@ function chooseLevel() {
 
 }
 
-function runQuiz() {}
+function runQuiz() {
+    console.log('running');
+}
 
 function checkAnswer() {}
 
