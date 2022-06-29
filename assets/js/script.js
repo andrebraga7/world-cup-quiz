@@ -99,16 +99,28 @@ function chooseLevel() {
     } else {
         quizArea.innerHTML = `
         <h2>${user}, select your level of difficulty!</h2>
-        <button id="group-stage" class="btn-green">Group stage</button>
+        <button id="group-stage" data-type="level-selection" class="btn-green">Group stage</button>
         <br>
-        <button id="cup-final" class="btn-green">Cup final</button>
+        <button id="cup-final" data-type="level-selection" class="btn-green">Cup final</button>
         `;
+    }
+
+    // Add event listeners only to the level buttons.
+    let buttons = document.getElementsByTagName('button');
+
+    for (let button of buttons) {
+        if (button.getAttribute('data-type') === 'level-selection') {
+            this.addEventListener('click', runQuiz);
+        }
     }
 
 }
 
 function runQuiz() {
+
+    
     console.log('running');
+
 }
 
 function checkAnswer() {}
