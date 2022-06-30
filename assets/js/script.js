@@ -46,9 +46,6 @@ function controls() {
 
 }
 
-// Global variable for the quiz area.
-let quizArea = document.getElementById('quiz-area');
-
 /**
  * Changes the sound button icon from ON to OFF
  * and stops playing sound in the DOM back and forth.
@@ -87,68 +84,92 @@ function instructionsCloseButton() {
 
 }
 
+let quizArea = document.getElementById('quiz-area');
+let user;
+
 /**
  * Get the username and if empty display a warning message,
  * if username is completed load the choose level template literals.
  */
 function chooseLevel() {
-
-    let user = document.getElementById('username').value;
     
+    user = document.getElementById('username').value;
+
     if (user == '') {
         document.getElementById('empty-username').style.visibility = "visible";
     } else {
         quizArea.innerHTML = `
         <h2>${user}, select your level of difficulty!</h2>
-        <button data-level="group-stage" class="btn-green">Group stage</button>
+        <button data-level="groupStage" class="btn-green">Group stage</button>
         <br>
-        <button data-level="cup-final" class="btn-green">Cup final</button>
+        <button data-level="cupFinal" class="btn-green">Cup final</button>
         `;
     }
 
     // Add event listeners only to the level selection buttons
-    // and pass user and level to the runQuiz().
+    // and pass level to the generateQuestions().
     let levelButtons = document.querySelectorAll('[data-level');
 
     for (let button of levelButtons) {
         button.addEventListener('click', function() {
             let level = this.getAttribute('data-level');
-            runQuiz(user, level);
+            generateQuestions(level);
         });
     }
 
 }
 
-function runQuiz(user, level) {
+function generateQuestions(level) {
 
-    let score = 0;
-    let round = 0;
-    let question = "A random question from an Array?"
-    let answer = [1,2,3,4];
+    let quizQuestions;
 
-    quizArea.innerHTML = `
-    <div id="game-info">
-        <div><span>${user}</span></div>
-        <div><span>Score: ${score} </span></div>
-        <div><span>Round: ${round} / 7</span></div>
-    </div>
-    <p id="question">${question}</p>
-    <div id="answers">
-        <button class="btn-answer" id="answer1">${answer[0]}</button>
-        <button class="btn-answer" id="answer2">${answer[1]}</button>
-        <button class="btn-answer" id="answer3">${answer[2]}</button>
-        <button class="btn-answer" id="answer4">${answer[3]}</button>
-    </div>
-    <button id="next">Next round</button>
-    `;
+    if (level === 'groupStage') {
+        quizQuestions = shuffle(groupStageArray);
+    } else {
+        quizQuestions = shuffle(cupFinalArray);
+    }
 
+    runQuiz(quizQuestions);
 }
 
+// function runQuiz() {
+
+//     let score = 0;
+//     let round = 0;
+//     let q = 0;
+//     let quizQuestions = shuffledArray[q].question;
+//     let answer = [1,2,3,4];
+
+//     quizArea.innerHTML = `
+//     <div id="game-info">
+//         <div><span>${user}</span></div>
+//         <div><span>Score: ${score} </span></div>
+//         <div><span>Round: ${round} / 7</span></div>
+//     </div>
+//     <p id="question">${quizQuestions[0]}</p>
+//     <div id="answers">
+//         <button class="btn-answer" id="answer1">${answer[0]}</button>
+//         <button class="btn-answer" id="answer2">${answer[1]}</button>
+//         <button class="btn-answer" id="answer3">${answer[2]}</button>
+//         <button class="btn-answer" id="answer4">${answer[3]}</button>
+//     </div>
+//     <button id="next">Next round</button>
+//     `;
+
+// }
+
+/**
+ * This will shuffle the questions arrays
+ * and return a randomized array of questions
+ * The code for this function follows the Fisher Yates method.
+ */
 function shuffle(array) {
+
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
+    
     return array;
 }
 
@@ -159,3 +180,20 @@ function incrementScore() {}
 function nextRound() {}
 
 function endQuiz() {}
+
+// Array of questions and answers for the group stage level
+
+let groupStageArray = [
+    ['Question 1', 'Correct answer', 'Wrong answer2', 'Wrong answer3', 'Wrong answer4'],
+    ['Question 2', 'Correct answer', 'Wrong answer2', 'Wrong answer3', 'Wrong answer4'],
+    ['Question 3', 'Correct answer', 'Wrong answer2', 'Wrong answer3', 'Wrong answer4'],
+    // {question: 'Question 4',
+    //     answer1: ['Correct answer', 'correct'],
+    //     answer2: ['Wrong answer2', 'wrong'],
+    //     answer3: ['Wrong answer3', 'wrong'],
+    //     answer4: ['Wrong answer4', 'wrong'],}
+];
+
+// Array of questions and answers for the cup final level
+
+let cupFinalArray = ['1', '2', '3', '4'];
