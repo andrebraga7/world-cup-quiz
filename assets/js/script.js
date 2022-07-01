@@ -184,14 +184,15 @@ function endQuiz() {}
 // Array of questions and answers for the group stage level
 
 let groupStageArray = [
-    ['Question 1', 'Correct answer', 'Wrong answer2', 'Wrong answer3', 'Wrong answer4'],
-    ['Question 2', 'Correct answer', 'Wrong answer2', 'Wrong answer3', 'Wrong answer4'],
-    ['Question 3', 'Correct answer', 'Wrong answer2', 'Wrong answer3', 'Wrong answer4'],
-    // {question: 'Question 4',
-    //     answer1: ['Correct answer', 'correct'],
-    //     answer2: ['Wrong answer2', 'wrong'],
-    //     answer3: ['Wrong answer3', 'wrong'],
-    //     answer4: ['Wrong answer4', 'wrong'],}
+    {
+        question: 'What is the answer 1?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
 ];
 
 // Array of questions and answers for the cup final level
