@@ -4,7 +4,7 @@
 document.addEventListener('DOMContentLoaded', controls);
 
 /** 
- * The function that is called when the DOM finishes loading
+ * This function is called when the DOM finishes loading
  * adds event listener to the four initial buttons.
 */
 function controls() {
@@ -17,7 +17,7 @@ function controls() {
             // gets the button's id
             let id = this.getAttribute('id');
             
-            //run the specific function for the button depending on the id
+            //call the specific function for the button depending on the id
             switch(id) {
                 case 'submit':
                     chooseLevel();
@@ -106,7 +106,7 @@ function chooseLevel() {
         `;
     }
 
-    // Add event listeners only to the level selection buttons
+    // Add event listeners to the level selection buttons
     // and pass level to the generateQuestions().
     let levelButtons = document.querySelectorAll('[data-level');
 
@@ -119,17 +119,34 @@ function chooseLevel() {
 
 }
 
+/**
+ * Generates the quiz questions by retrieving the corresponding level array,
+ * shuffling the order and selecting only the first 10 questions.
+ */
 function generateQuestions(level) {
 
     let quizQuestions;
 
     if (level === 'groupStage') {
-        quizQuestions = shuffle(groupStageArray);
+        quizQuestions = shuffle(groupStageArray).slice(0, 10);
     } else {
-        quizQuestions = shuffle(cupFinalArray);
+        quizQuestions = shuffle(cupFinalArray).slice(0, 10);
     }
 
-    runQuiz(quizQuestions);
+    shuffleAnswers(quizQuestions);
+}
+
+function shuffleAnswers(quizQuestions) {}
+
+function shuffle(array) {
+
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+
+    return array;
+
 }
 
 // function runQuiz() {
@@ -163,15 +180,6 @@ function generateQuestions(level) {
  * and return a randomized array of questions
  * The code for this function follows the Fisher Yates method.
  */
-function shuffle(array) {
-
-    for (let i = array.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    
-    return array;
-}
 
 function checkAnswer() {}
 
@@ -186,6 +194,177 @@ function endQuiz() {}
 let groupStageArray = [
     {
         question: 'What is the answer 1?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 2?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 3?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 4?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 5?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 6?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 7?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 8?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 9?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 10?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 11?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 12?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 13?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 14?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 15?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 16?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 17?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 18?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 19?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 20?',
         answers: [
             ['answer1', 'correct'],
             ['answer2', 'wrong'],
