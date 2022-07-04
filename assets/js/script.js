@@ -177,8 +177,8 @@ function shuffle(array) {
 }
 
 // Initial score and round count.
-let score = 0;
-let round = 1;
+let score = 9;
+let round = 10;
 
 /**
  * Displays the question and answers with a next button that calls the nextRound().
@@ -202,7 +202,7 @@ function runQuiz(quizQuestions) {
         <button class="btn-answer" data-answer="${answer[2][1]}">${answer[2][0]}</button>
         <button class="btn-answer" data-answer="${answer[3][1]}">${answer[3][0]}</button>
     </div>
-    <button id="next">Next round</button>
+    <button id="next" class="btn-green-medium">Next round</button>
     `;
 
     // Add event listeners to the answers button.
@@ -234,7 +234,11 @@ function checkAnswer(answerClicked, button, answerButtons,) {
         button.style.backgroundColor = "lightcoral";
     }
 
-    // disables the answer buttons and removes event listeners.
+    // Set the left border of the correct answer to a solid green
+    let correctAnswer = document.querySelector('[data-answer="correct"]');
+    correctAnswer.style.borderLeft = "solid 10px green";
+
+    // Disables the answer buttons and removes event listeners.
     for (button of answerButtons) {
         button.style.pointerEvents = "none";
         button.setAttribute('disabled', '');       
@@ -263,8 +267,38 @@ function nextRound(quizQuestions) {
     }
 }
 
+/**
+ * Display the result of the quiz and gives options to the user to play again or exit.
+ */
 function endQuiz() {
-    console.log('End of quiz');
+
+    let icon;
+    let message;
+
+    if (score < 4) {
+        icon = `<i class="fa-solid fa-futbol"></i>`;
+        message = "Here's a football so you can practice!";
+    } else if (score > 3 && score < 8) {
+        icon = `<i class="fa-solid fa-plane-departure"></i>`;
+        message = "You didn't qualify for the final, time to go home!";
+    } else {
+        icon = `<i class="gold fa-solid fa-trophy"></i>`;
+        message = "Congratulations, you won the world cup!";
+    }
+    
+    quizArea.innerHTML = `
+    <h2 id="end-game-h2">${user} you scored <span>${score}</span>!</h2>
+    <div id="result">
+        <span>${icon}</span>
+        <h2>${message}</h2>
+    </div>
+    <button id="play-again" class="btn-green-medium">Play again</button>
+    <br>
+    <button id="new-level" class="btn-green-medium">Choose level</button>
+    <br>
+    <button id="exit" class="btn-green-medium">End game</button>
+    `;
+
 }
 
 // Array of questions and answers for the group stage level

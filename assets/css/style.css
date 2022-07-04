@@ -32,7 +32,7 @@ header > h1 > i {
 
 /* main quiz area */
 
-#quiz-area {
+.quiz-area {
     height: 60vh;
     width: 60vw;
     margin: auto;
@@ -42,7 +42,7 @@ header > h1 > i {
     background-color: #fafafa;
 }
 
-#quiz-area > h2 {
+.quiz-area > h2 {
     padding: 10vh 0;
 }
 
@@ -125,14 +125,25 @@ footer a {
 
 /* style for the end game html */
 
+#end-game-h2 {
+    padding: 10vh 0 5vh;
+}
+
 #result {
     padding-bottom: 5vh;
 }
 
 #result i {
     padding: 0 0 3vh;
-    color: gold;
     font-size: 4em;
+}
+
+.silver {
+    color: #ABB0B8;
+}
+
+.gold {
+    color: gold;
 }
 
 /* buttons */
@@ -161,23 +172,25 @@ footer a {
     margin: 2px auto;
     border: solid 1px black;
     background-color: #dbdbdb;
+    transition: border 0.3s;
 }
 
 .btn-answer:hover {
     background-color: gold;
 }
 
-#next {
+.btn-green-medium {
     height: 4vh;
-    width: 20%;
-    margin-top: 4vh;
+    width: 30%;
+    padding: 2px;
+    margin-top: 1vh;
     color: white;
     font-size: 1em;
     background-color: green;
     border: solid 1px black;
 }
 
-#next:hover {
+.btn-green-medium:hover {
     box-shadow: 3px 3px black;
 }
 
