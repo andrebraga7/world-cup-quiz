@@ -109,7 +109,7 @@ function chooseLevel() {
 
     // Add event listeners to the level selection buttons
     // and pass level to the generateQuestions().
-    let levelButtons = document.querySelectorAll('[data-level');
+    let levelButtons = document.querySelectorAll('[data-level]');
 
     for (let button of levelButtons) {
         button.addEventListener('click', function() {
@@ -183,17 +183,30 @@ function runQuiz(quizQuestions) {
     </div>
     <p id="question">${question}</p>
     <div id="answers">
-        <button class="btn-answer" id="answer1">${answer[0][0]}</button>
-        <button class="btn-answer" id="answer2">${answer[1][0]}</button>
-        <button class="btn-answer" id="answer3">${answer[2][0]}</button>
-        <button class="btn-answer" id="answer4">${answer[3][0]}</button>
+        <button class="btn-answer" data-answer="${answer[0][1]}">${answer[0][0]}</button>
+        <button class="btn-answer" data-answer="${answer[1][1]}">${answer[1][0]}</button>
+        <button class="btn-answer" data-answer="${answer[2][1]}">${answer[2][0]}</button>
+        <button class="btn-answer" data-answer="${answer[3][1]}">${answer[3][0]}</button>
     </div>
     <button id="next">Next round</button>
     `;
 
+    let answerButtons = document.querySelectorAll('[data-answer]');
+
+    for (let button of answerButtons) {
+        button.addEventListener('click', function() {
+            let answerClicked = this.getAttribute('data-answer');
+            checkAnswer(answerClicked);
+        })
+    }
+
 }
 
-function checkAnswer() {}
+function checkAnswer(answerClicked) {
+
+    console.log(answerClicked);
+
+}
 
 function incrementScore() {}
 
