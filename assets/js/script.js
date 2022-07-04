@@ -20,7 +20,7 @@ function controls() {
             //call the specific function for the button depending on the id
             switch(id) {
                 case 'submit':
-                    chooseLevel();
+                    captureUser();
                     break;
                 case 'sound-btn':
                     soundButton();
@@ -40,7 +40,7 @@ function controls() {
     // Event listener for the enter key on the username input field.
     document.getElementById('username').addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
-            chooseLevel();
+            captureUser();
         }
     })
 
@@ -84,17 +84,26 @@ function instructionsCloseButton() {
 
 }
 
-// gloval variables to be used in different functions
+// Higher scope variables to be used in different functions
 let quizArea = document.getElementById('quiz-area');
 let user;
+let level;
+
+/**
+ * Captures the username before calling chooseLevel().
+ */
+function captureUser() {
+
+    user = document.getElementById('username').value;
+    chooseLevel();
+
+}
 
 /**
  * Get the username and if empty display a warning message,
  * if username is completed load the choose level template literals.
  */
 function chooseLevel() {
-    
-    user = document.getElementById('username').value;
 
     if (user == '') {
         document.getElementById('empty-username').style.visibility = "visible";
@@ -113,7 +122,7 @@ function chooseLevel() {
 
     for (let button of levelButtons) {
         button.addEventListener('click', function() {
-            let level = this.getAttribute('data-level');
+            level = this.getAttribute('data-level');
             generateQuestions(level);
         });
     }
@@ -138,12 +147,6 @@ function generateQuestions(level) {
         default:
             throw 'Unknown level';
     }
-
-    // if (level === 'groupStage') {
-    //     quizQuestions = shuffle(groupStageArray).slice(0, 10);
-    // } else {
-    //     quizQuestions = shuffle(cupFinalArray).slice(0, 10);
-    // }
 
     shuffleAnswers(quizQuestions);
 }
@@ -177,8 +180,8 @@ function shuffle(array) {
 }
 
 // Initial score and round count.
-let score = 9;
-let round = 10;
+let score = 0;
+let round = 1;
 
 /**
  * Displays the question and answers with a next button that calls the nextRound().
@@ -216,9 +219,18 @@ function runQuiz(quizQuestions) {
     }
 
     // Call nextRound when next round button is clicked.
-    document.getElementById('next').addEventListener('click', function() {
+    let nextButton = document.getElementById('next');
+
+    nextButton.addEventListener('click', function() {
         nextRound(quizQuestions);
     });
+
+    // // Event listener for the enter keydown for the next round.
+    // document.addEventListener('keydown', function(event) {
+    //     if (event.key === 'Enter') {
+    //         nextRound(quizQuestions);
+    //     }
+    // })
 
 }
 
@@ -259,8 +271,9 @@ function incrementScore() {
  * Increment the round and call runQuiz() if round <= to 10.
  */
 function nextRound(quizQuestions) {
-    ++round;
-    if (round <= 10) {
+    
+    if (round < 10) {
+        ++round;
         runQuiz(quizQuestions);
     } else {
         endQuiz();
@@ -298,6 +311,37 @@ function endQuiz() {
     <br>
     <button id="exit" class="btn-green-medium">End game</button>
     `;
+
+
+    // Add event listeners to the option buttons
+    let buttons = document.getElementsByTagName('button');
+
+    for (let button of buttons) {
+        button.addEventListener('click', function() {
+            
+            // Get the button id
+            let id = this.getAttribute('id');
+
+            switch(id) {
+                case 'play-again':
+                    score = 0;
+                    round = 1;
+                    generateQuestions(level);
+                    break;
+                case 'new-level':
+                    score = 0;
+                    round = 1;
+                    chooseLevel();
+                    break;
+                case 'exit':
+                    location.reload();
+                    break;
+                default:
+                    throw 'Unknown button';
+            }
+
+        })
+    }
 
 }
 
