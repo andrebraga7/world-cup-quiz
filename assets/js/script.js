@@ -121,7 +121,7 @@ function chooseLevel() {
 
 /**
  * Generates the quiz questions by retrieving the corresponding level array,
- * shuffling the order and selecting only the first 10 questions.
+ * shuffling the order with the shuffle function and selecting only the first 10 questions.
  */
 function generateQuestions(level) {
 
@@ -136,8 +136,23 @@ function generateQuestions(level) {
     shuffleAnswers(quizQuestions);
 }
 
-function shuffleAnswers(quizQuestions) {}
+/**
+ * Shuffles the order of the answers of each question by calling the shuffle functions.
+ */
+function shuffleAnswers(quizQuestions) {
 
+    for (let answersArray of quizQuestions) {
+        shuffle(answersArray.answers);
+    }
+
+    runQuiz(quizQuestions);
+
+}
+
+/**
+ * This will shuffle the input array and return a randomized order array.
+ * The code for this function follows the Fisher Yates method.
+ */
 function shuffle(array) {
 
     for (let i = array.length - 1; i > 0; i--) {
@@ -149,37 +164,25 @@ function shuffle(array) {
 
 }
 
-// function runQuiz() {
+function runQuiz() {
 
-//     let score = 0;
-//     let round = 0;
-//     let q = 0;
-//     let quizQuestions = shuffledArray[q].question;
-//     let answer = [1,2,3,4];
+    quizArea.innerHTML = `
+    <div id="game-info">
+        <div><span>${user}</span></div>
+        <div><span>Score: ${score} </span></div>
+        <div><span>Round: ${round} / 7</span></div>
+    </div>
+    <p id="question">${quizQuestions[0]}</p>
+    <div id="answers">
+        <button class="btn-answer" id="answer1">${answer[0]}</button>
+        <button class="btn-answer" id="answer2">${answer[1]}</button>
+        <button class="btn-answer" id="answer3">${answer[2]}</button>
+        <button class="btn-answer" id="answer4">${answer[3]}</button>
+    </div>
+    <button id="next">Next round</button>
+    `;
 
-//     quizArea.innerHTML = `
-//     <div id="game-info">
-//         <div><span>${user}</span></div>
-//         <div><span>Score: ${score} </span></div>
-//         <div><span>Round: ${round} / 7</span></div>
-//     </div>
-//     <p id="question">${quizQuestions[0]}</p>
-//     <div id="answers">
-//         <button class="btn-answer" id="answer1">${answer[0]}</button>
-//         <button class="btn-answer" id="answer2">${answer[1]}</button>
-//         <button class="btn-answer" id="answer3">${answer[2]}</button>
-//         <button class="btn-answer" id="answer4">${answer[3]}</button>
-//     </div>
-//     <button id="next">Next round</button>
-//     `;
-
-// }
-
-/**
- * This will shuffle the questions arrays
- * and return a randomized array of questions
- * The code for this function follows the Fisher Yates method.
- */
+}
 
 function checkAnswer() {}
 
