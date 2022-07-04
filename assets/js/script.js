@@ -84,6 +84,7 @@ function instructionsCloseButton() {
 
 }
 
+// gloval variables to be used in different functions
 let quizArea = document.getElementById('quiz-area');
 let user;
 
@@ -164,20 +165,28 @@ function shuffle(array) {
 
 }
 
-function runQuiz() {
+/**
+ * Displays the question and answers with a next button that calls the nextRound().
+ */
+function runQuiz(quizQuestions) {
+
+    let score = 0;
+    let round = 0;
+    let question = quizQuestions[round].question;
+    let answer = quizQuestions[round].answers;
 
     quizArea.innerHTML = `
     <div id="game-info">
         <div><span>${user}</span></div>
         <div><span>Score: ${score} </span></div>
-        <div><span>Round: ${round} / 7</span></div>
+        <div><span>Round: ${round + 1} / 7</span></div>
     </div>
-    <p id="question">${quizQuestions[0]}</p>
+    <p id="question">${question}</p>
     <div id="answers">
-        <button class="btn-answer" id="answer1">${answer[0]}</button>
-        <button class="btn-answer" id="answer2">${answer[1]}</button>
-        <button class="btn-answer" id="answer3">${answer[2]}</button>
-        <button class="btn-answer" id="answer4">${answer[3]}</button>
+        <button class="btn-answer" id="answer1">${answer[0][0]}</button>
+        <button class="btn-answer" id="answer2">${answer[1][0]}</button>
+        <button class="btn-answer" id="answer3">${answer[2][0]}</button>
+        <button class="btn-answer" id="answer4">${answer[3][0]}</button>
     </div>
     <button id="next">Next round</button>
     `;
