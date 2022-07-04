@@ -90,7 +90,7 @@ let user;
 let level;
 
 /**
- * Captures the username before calling chooseLevel().
+ * Captures the username before calling the chooseLevel().
  */
 function captureUser() {
 
