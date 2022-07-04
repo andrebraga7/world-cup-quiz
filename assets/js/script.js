@@ -196,15 +196,29 @@ function runQuiz(quizQuestions) {
     for (let button of answerButtons) {
         button.addEventListener('click', function() {
             let answerClicked = this.getAttribute('data-answer');
-            checkAnswer(answerClicked);
+            checkAnswer(answerClicked, button, answerButtons);
         })
     }
 
 }
 
-function checkAnswer(answerClicked) {
+/**
+ * Check the answer and changes the button background color to green or red.
+ */
+function checkAnswer(answerClicked, button, answerButtons) {
 
-    console.log(answerClicked);
+    if (answerClicked === 'correct') {
+        button.style.backgroundColor = "lightgreen";
+        incrementScore();
+    } else {
+        button.style.backgroundColor = "lightcoral";
+    }
+
+    // disables the answer buttons and removes event listeners.
+    for (button of answerButtons) {
+        button.style.pointerEvents = "none";
+        button.setAttribute('disabled', '');       
+    }
 
 }
 
