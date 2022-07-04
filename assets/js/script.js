@@ -128,11 +128,22 @@ function generateQuestions(level) {
 
     let quizQuestions;
 
-    if (level === 'groupStage') {
-        quizQuestions = shuffle(groupStageArray).slice(0, 10);
-    } else {
-        quizQuestions = shuffle(cupFinalArray).slice(0, 10);
+    switch(level) {
+        case 'groupStage':
+            quizQuestions = shuffle(groupStageArray).slice(0, 10);
+            break;
+        case 'upFinal':
+            quizQuestions = shuffle(cupFinalArray).slice(0, 10);
+            break;
+        default:
+            throw 'Unknown level';
     }
+
+    // if (level === 'groupStage') {
+    //     quizQuestions = shuffle(groupStageArray).slice(0, 10);
+    // } else {
+    //     quizQuestions = shuffle(cupFinalArray).slice(0, 10);
+    // }
 
     shuffleAnswers(quizQuestions);
 }
@@ -167,21 +178,22 @@ function shuffle(array) {
 
 // Initial score and round count.
 let score = 0;
-let round = 0;
+let round = 1;
 
 /**
  * Displays the question and answers with a next button that calls the nextRound().
  */
 function runQuiz(quizQuestions) {
 
-    let question = quizQuestions[round].question;
-    let answer = quizQuestions[round].answers;
+    let question = quizQuestions[round -1].question;
+    let answer = quizQuestions[round -1].answers;
 
+    // Template literals for the question and answers display.
     quizArea.innerHTML = `
     <div id="game-info">
         <div><span>${user}</span></div>
         <div><span id="score">Score: ${score}</span></div>
-        <div><span>Round: ${round + 1} / 7</span></div>
+        <div><span>Round: ${round} / 10</span></div>
     </div>
     <p id="question">${question}</p>
     <div id="answers">
@@ -193,6 +205,7 @@ function runQuiz(quizQuestions) {
     <button id="next">Next round</button>
     `;
 
+    // Add event listeners to the answers button.
     let answerButtons = document.querySelectorAll('[data-answer]');
 
     for (let button of answerButtons) {
@@ -203,7 +216,9 @@ function runQuiz(quizQuestions) {
     }
 
     // Call nextRound when next round button is clicked.
-    document.getElementById('next').addEventListener('click', nextRound);
+    document.getElementById('next').addEventListener('click', function() {
+        nextRound(quizQuestions);
+    });
 
 }
 
@@ -227,15 +242,30 @@ function checkAnswer(answerClicked, button, answerButtons,) {
 
 }
 
+/**
+ * Increment the score by one.
+ */
 function incrementScore() {
     ++score;
     let oldScore = document.getElementById('score');
     oldScore.innerHTML = `Score: ${score}`;
 }
 
-function nextRound() {}
+/**
+ * Increment the round and call runQuiz() if round <= to 10.
+ */
+function nextRound(quizQuestions) {
+    ++round;
+    if (round <= 10) {
+        runQuiz(quizQuestions);
+    } else {
+        endQuiz();
+    }
+}
 
-function endQuiz() {}
+function endQuiz() {
+    console.log('End of quiz');
+}
 
 // Array of questions and answers for the group stage level
 
