@@ -88,6 +88,7 @@ function instructionsCloseButton() {
 let quizArea = document.getElementById('quiz-area');
 let user;
 let level;
+let quizQuestions;
 
 /**
  * Captures the username before calling the chooseLevel().
@@ -135,8 +136,6 @@ function chooseLevel() {
  */
 function generateQuestions(level) {
 
-    let quizQuestions;
-
     switch(level) {
         case 'groupStage':
             quizQuestions = shuffle(groupStageArray).slice(0, 10);
@@ -148,19 +147,19 @@ function generateQuestions(level) {
             throw 'Unknown level';
     }
 
-    shuffleAnswers(quizQuestions);
+    shuffleAnswers();
 }
 
 /**
  * Shuffles the order of the answers of each question by calling the shuffle functions.
  */
-function shuffleAnswers(quizQuestions) {
+function shuffleAnswers() {
 
     for (let answersArray of quizQuestions) {
         shuffle(answersArray.answers);
     }
 
-    runQuiz(quizQuestions);
+    runQuiz();
 
 }
 
@@ -186,7 +185,7 @@ let round = 1;
 /**
  * Displays the question and answers with a next button that calls the nextRound().
  */
-function runQuiz(quizQuestions) {
+function runQuiz() {
 
     let question = quizQuestions[round -1].question;
     let answer = quizQuestions[round -1].answers;
@@ -217,13 +216,6 @@ function runQuiz(quizQuestions) {
             checkAnswer(answerClicked, button, answerButtons);
         })
     }
-
-    // Call nextRound when next round button is clicked.
-    let nextButton = document.getElementById('next');
-
-    nextButton.addEventListener('click', function() {
-        nextRound(quizQuestions);
-    });
 
     // // Event listener for the enter keydown for the next round.
     // document.addEventListener('keydown', function(event) {
@@ -256,6 +248,13 @@ function checkAnswer(answerClicked, button, answerButtons,) {
         button.setAttribute('disabled', '');       
     }
 
+    // Call nextRound when next round button is clicked.
+    let nextButton = document.getElementById('next');
+
+    nextButton.addEventListener('click', function() {
+        nextRound();
+    });
+
 }
 
 /**
@@ -270,11 +269,11 @@ function incrementScore() {
 /**
  * Increment the round and call runQuiz() if round <= to 10.
  */
-function nextRound(quizQuestions) {
+function nextRound() {
     
     if (round < 10) {
         ++round;
-        runQuiz(quizQuestions);
+        runQuiz();
     } else {
         endQuiz();
     }
