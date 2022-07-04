@@ -165,20 +165,22 @@ function shuffle(array) {
 
 }
 
+// Initial score and round count.
+let score = 0;
+let round = 0;
+
 /**
  * Displays the question and answers with a next button that calls the nextRound().
  */
 function runQuiz(quizQuestions) {
 
-    let score = 0;
-    let round = 0;
     let question = quizQuestions[round].question;
     let answer = quizQuestions[round].answers;
 
     quizArea.innerHTML = `
     <div id="game-info">
         <div><span>${user}</span></div>
-        <div><span>Score: ${score} </span></div>
+        <div><span id="score">Score: ${score}</span></div>
         <div><span>Round: ${round + 1} / 7</span></div>
     </div>
     <p id="question">${question}</p>
@@ -200,12 +202,15 @@ function runQuiz(quizQuestions) {
         })
     }
 
+    // Call nextRound when next round button is clicked.
+    document.getElementById('next').addEventListener('click', nextRound);
+
 }
 
 /**
  * Check the answer and changes the button background color to green or red.
  */
-function checkAnswer(answerClicked, button, answerButtons) {
+function checkAnswer(answerClicked, button, answerButtons,) {
 
     if (answerClicked === 'correct') {
         button.style.backgroundColor = "lightgreen";
@@ -222,7 +227,11 @@ function checkAnswer(answerClicked, button, answerButtons) {
 
 }
 
-function incrementScore() {}
+function incrementScore() {
+    ++score;
+    let oldScore = document.getElementById('score');
+    oldScore.innerHTML = `Score: ${score}`;
+}
 
 function nextRound() {}
 
