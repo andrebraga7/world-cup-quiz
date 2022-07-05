@@ -3,13 +3,12 @@
 
 document.addEventListener('DOMContentLoaded', controls);
 
-// Audios for the quiz
-
-let audioClick = new Audio('../sounds/click.mp3');
-let audioCorrect = new Audio('../sounds/correct.mp3');
-let audioWrong = new Audio('../sounds/error.mp3');
-let audioSuccess = new Audio('../sounds/success.mp3');
-let audioFailure = new Audio('../sounds/failure.mp3');
+// Link audios for the quiz
+let audioClick = document.getElementById('audio-click');
+let audioCorrect = document.getElementById('audio-correct');
+let audioWrong = document.getElementById('audio-wrong');
+let audioSuccess = document.getElementById('audio-success');
+let audioFailure = document.getElementById('audio-failure');
 
 
 /** 
@@ -388,7 +387,6 @@ function endQuiz() {
                     chooseLevel();
                     break;
                 case 'exit':
-                    audioClick.play();
                     location.reload();
                     break;
                 default:
