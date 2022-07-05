@@ -111,9 +111,9 @@ function chooseLevel() {
     } else {
         quizArea.innerHTML = `
         <h2>${user}, select your level of difficulty!</h2>
-        <button data-level="groupStage" class="btn-green">Group stage</button>
+        <button data-level="group-stage" class="btn-green">Group stage</button>
         <br>
-        <button data-level="cupFinal" class="btn-green">Cup final</button>
+        <button data-level="cup-final" class="btn-green">Cup final</button>
         `;
     }
 
@@ -137,10 +137,10 @@ function chooseLevel() {
 function generateQuestions(level) {
 
     switch(level) {
-        case 'groupStage':
+        case 'group-stage':
             quizQuestions = shuffle(groupStageArray).slice(0, 10);
             break;
-        case 'upFinal':
+        case 'cup-final':
             quizQuestions = shuffle(cupFinalArray).slice(0, 10);
             break;
         default:
@@ -204,7 +204,7 @@ function runQuiz() {
         <button class="btn-answer" data-answer="${answer[2][1]}">${answer[2][0]}</button>
         <button class="btn-answer" data-answer="${answer[3][1]}">${answer[3][0]}</button>
     </div>
-    <button id="next" class="btn-green-medium">Next round</button>
+    <button id="next" class="btn-green-medium" value="no-click">Next round</button>
     `;
 
     // Add event listeners to the answers button.
@@ -214,15 +214,9 @@ function runQuiz() {
         button.addEventListener('click', function() {
             let answerClicked = this.getAttribute('data-answer');
             checkAnswer(answerClicked, button, answerButtons);
+            buttonStyles(button, answerButtons);
         })
     }
-
-    // // Event listener for the enter keydown for the next round.
-    // document.addEventListener('keydown', function(event) {
-    //     if (event.key === 'Enter') {
-    //         nextRound(quizQuestions);
-    //     }
-    // })
 
 }
 
@@ -238,22 +232,39 @@ function checkAnswer(answerClicked, button, answerButtons,) {
         button.style.backgroundColor = "lightcoral";
     }
 
+    // Change the value to clicked and
+    // call nextRound when next round button is clicked.
+    let nextButton = document.getElementById('next');
+    nextButton.value = "clicked";
+
+    nextButton.addEventListener('click', nextRound);
+    document.addEventListener('keydown', eventEnter);
+
+}
+
+/**
+ * The eventHandler for the Enter keydown
+ */
+function eventEnter(event) {
+    if (event.key === 'Enter') {
+        nextRound();
+    }
+}
+
+/**
+ * Adds a bborder to the correct answer and disables the buttons.
+ */
+function buttonStyles(button, answerButtons) {
+
     // Set the left border of the correct answer to a solid green
     let correctAnswer = document.querySelector('[data-answer="correct"]');
     correctAnswer.style.borderLeft = "solid 10px green";
 
     // Disables the answer buttons and removes event listeners.
     for (button of answerButtons) {
-        button.style.pointerEvents = "none";
-        button.setAttribute('disabled', '');       
-    }
-
-    // Call nextRound when next round button is clicked.
-    let nextButton = document.getElementById('next');
-
-    nextButton.addEventListener('click', function() {
-        nextRound();
-    });
+    button.style.pointerEvents = "none";
+    button.setAttribute('disabled', '');       
+}
 
 }
 
@@ -268,9 +279,12 @@ function incrementScore() {
 
 /**
  * Increment the round and call runQuiz() if round <= to 10.
+ * Also removes the Enter eventHandler from the document
  */
 function nextRound() {
-    
+
+    document.removeEventListener('keydown', eventEnter);
+
     if (round < 10) {
         ++round;
         runQuiz();
@@ -312,7 +326,7 @@ function endQuiz() {
     `;
 
 
-    // Add event listeners to the option buttons
+    // Add event listeners to the options button
     let buttons = document.getElementsByTagName('button');
 
     for (let button of buttons) {
@@ -531,4 +545,185 @@ let groupStageArray = [
 
 // Array of questions and answers for the cup final level
 
-let cupFinalArray = ['1', '2', '3', '4'];
+let cupFinalArray = [
+    {
+        question: 'What is the answer 1?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 2?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 3?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 4?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 5?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 6?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 7?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 8?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 9?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 10?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 11?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 12?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 13?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 14?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 15?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 16?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 17?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 18?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 19?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+    {
+        question: 'What is the answer 20?',
+        answers: [
+            ['answer1', 'correct'],
+            ['answer2', 'wrong'],
+            ['answer3', 'wrong'],
+            ['answer4', 'wrong'],
+        ]
+    },
+];

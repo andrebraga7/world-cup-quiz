@@ -172,7 +172,7 @@ footer a {
     margin: 2px auto;
     border: solid 1px black;
     background-color: #dbdbdb;
-    transition: border 0.3s;
+    transition: all 0.3s;
 }
 
 .btn-answer:hover {
