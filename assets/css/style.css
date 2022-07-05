@@ -76,14 +76,16 @@ header > h1 > i {
     visibility: hidden;
     width: 50vw;
     height: 60vh;
+    color: #2b2b2b;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    padding: 5vh 2.5vw;
+    border: solid 5px purple;
+    background: #fafafa;
     position: absolute;
     top: 20vh;
     left: 25vw;
     z-index: 1;
-    color: #2b2b2b;
-    padding: 5vh 2.5vw;
-    background: #fafafa;
-    border: solid 5px purple;
 }
 
 #instructions h2, p {
@@ -91,7 +93,12 @@ header > h1 > i {
 }
 
 #instructions ul {
-    list-style: none;
+    text-align: left;
+}
+
+#instructions li {
+    font-weight: 700;
+    padding: 1vh 0;
 }
 
 /* footer */
