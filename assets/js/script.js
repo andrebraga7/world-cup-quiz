@@ -29,7 +29,7 @@ function controls() {
                     instructionsButton();
                     break;
                 case 'instructions-close':
-                    instructionsCloseButton();
+                    instructionsButton();
                     break;
                 default:
                     throw 'Unknown button';
@@ -65,22 +65,22 @@ function soundButton() {
 }
 
 /**
- * Open the instructions.
+ * Open and close the instructions.
  */
 function instructionsButton() {
 
+    let buttons = document.querySelectorAll('[data-button="instructions"]');
     let instructions = document.getElementById('instructions');
-    instructions.style.visibility = "visible";
 
-}
-
-/**
- * Close the instructions.
- */
-function instructionsCloseButton() {
-
-    let instructions = document.getElementById('instructions');
-    instructions.style.visibility = "hidden";
+    for (let button of buttons) {
+        if (button.value == 'hidden') {
+            button.value = "visible";
+            instructions.style.visibility = "visible";
+        } else {
+            button.value = "hidden";
+            instructions.style.visibility = "hidden";
+        }
+    }
 
 }
 
