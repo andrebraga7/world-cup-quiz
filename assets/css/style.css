@@ -60,7 +60,7 @@ header > h1 > i {
 #empty-username {
     visibility: hidden;
     color: red;
-    padding: 0;
+    padding: 1vh;
 }
 
 /* controls */

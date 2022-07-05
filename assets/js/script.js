@@ -96,7 +96,22 @@ let quizQuestions;
 function captureUser() {
 
     user = document.getElementById('username').value;
-    chooseLevel();
+
+    if (testPattern()) {
+        chooseLevel();
+    } else {
+        document.getElementById('empty-username').style.visibility = "visible";
+    }
+
+}
+
+function testPattern() {
+
+    // Allow uppercase, lowercase, numbers and underline, must have at least one alphabet and min 2 character
+    // regular expression made with https://regex101.com
+    let regExp = /^(?=.*[a-zA-Z]{1,})(?=.*[\d]{0,})[a-zA-Z0-9_]{2,10}$/;
+
+    return regExp.test(user);
 
 }
 
@@ -106,16 +121,12 @@ function captureUser() {
  */
 function chooseLevel() {
 
-    if (user == '') {
-        document.getElementById('empty-username').style.visibility = "visible";
-    } else {
-        quizArea.innerHTML = `
-        <h2>${user}, select your level of difficulty!</h2>
-        <button data-level="group-stage" class="btn-green">Group stage</button>
-        <br>
-        <button data-level="cup-final" class="btn-green">Cup final</button>
-        `;
-    }
+    quizArea.innerHTML = `
+    <h2>${user}, select your level of difficulty!</h2>
+    <button data-level="group-stage" class="btn-green">Group stage</button>
+    <br>
+    <button data-level="cup-final" class="btn-green">Cup final</button>
+    `;
 
     // Add event listeners to the level selection buttons
     // and pass level to the generateQuestions().
