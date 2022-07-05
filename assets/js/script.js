@@ -3,6 +3,15 @@
 
 document.addEventListener('DOMContentLoaded', controls);
 
+// Audios for the quiz
+
+let audioClick = new Audio('../sounds/click.mp3');
+let audioCorrect = new Audio('../sounds/correct.mp3');
+let audioWrong = new Audio('../sounds/error.mp3');
+let audioSuccess = new Audio('../sounds/success.mp3');
+let audioFailure = new Audio('../sounds/failure.mp3');
+
+
 /** 
  * This function is called when the DOM finishes loading
  * adds event listener to the four initial buttons.
@@ -62,6 +71,8 @@ function soundButton() {
         icon.value = "on";
     }
 
+    audioClick.play();
+
 }
 
 /**
@@ -81,6 +92,8 @@ function instructionsButton() {
             instructions.style.visibility = "hidden";
         }
     }
+
+    audioClick.play();
 
 }
 
@@ -102,6 +115,8 @@ function captureUser() {
     } else {
         document.getElementById('empty-username').style.visibility = "visible";
     }
+
+    audioClick.play();
 
 }
 
@@ -138,6 +153,7 @@ function chooseLevel() {
     for (let button of levelButtons) {
         button.addEventListener('click', function() {
             level = this.getAttribute('data-level');
+            audioClick.play();
             generateQuestions(level);
         });
     }
@@ -242,16 +258,19 @@ function checkAnswer(answerClicked, button, answerButtons,) {
     if (answerClicked === 'correct') {
         button.style.backgroundColor = "lightgreen";
         incrementScore();
+        audioCorrect.play();
     } else {
         button.style.backgroundColor = "lightcoral";
+        audioWrong.play();
     }
 
-    // Change the value to clicked and
     // call nextRound when next round button is clicked.
     let nextButton = document.getElementById('next');
-    nextButton.value = "clicked";
 
-    nextButton.addEventListener('click', nextRound);
+    nextButton.addEventListener('click', function() {
+        audioClick.play();
+        nextRound();
+    });
     document.addEventListener('keydown', eventEnter);
 
 }
@@ -261,6 +280,7 @@ function checkAnswer(answerClicked, button, answerButtons,) {
  */
 function eventEnter(event) {
     if (event.key === 'Enter') {
+        audioClick.play();
         nextRound();
     }
 }
@@ -320,12 +340,15 @@ function endQuiz() {
     if (score < 4) {
         icon = `<i class="fa-solid fa-futbol"></i>`;
         message = "Here's a football so you can practice!";
+        audioFailure.play();
     } else if (score > 3 && score < 8) {
         icon = `<i class="fa-solid fa-plane-departure"></i>`;
         message = "You didn't qualify for the final, time to go home!";
+        audioFailure.play();
     } else {
         icon = `<i class="gold fa-solid fa-trophy"></i>`;
         message = "Congratulations, you won the world cup!";
+        audioSuccess.play();
     }
     
     quizArea.innerHTML = `
@@ -355,14 +378,17 @@ function endQuiz() {
                 case 'play-again':
                     score = 0;
                     round = 1;
+                    audioClick.play();
                     generateQuestions(level);
                     break;
                 case 'new-level':
                     score = 0;
                     round = 1;
+                    audioClick.play();
                     chooseLevel();
                     break;
                 case 'exit':
+                    audioClick.play();
                     location.reload();
                     break;
                 default:
