@@ -408,184 +408,184 @@ function endQuiz() {
 // Array of questions and answers for the group stage level
 let groupStageArray = [
     {
-        question: 'What is the answer 1?',
+        question: 'What was the official 2010 World Cup song?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['Waka Waka (This Time For Africa) by Shakira', 'correct'],
+            ["Livin' La Vida Loca by Ricky Martin", 'wrong'],
+            ['We Are One (Ole Ola) by Pitbull', 'wrong'],
+            ['Seven Nation Army by The White Stripes', 'wrong'],
+        ],
     },
     {
-        question: 'What is the answer 2?',
+        question: 'How many teams will the 2022 Qatar World Cup have?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['32', 'correct'],
+            ['64', 'wrong'],
+            ['24', 'wrong'],
+            ['48', 'wrong'],
+        ],
     },
     {
-        question: 'What is the answer 3?',
+        question: "What happens if there's a draw in the knockout stage?",
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['Extra time and then penalty shootout', 'correct'],
+            ['Straight to penalty shootout', 'wrong'],
+            ['Golden goal', 'wrong'],
+            ['Golden goal and then penalty shootout', 'wrong'],
+        ],
     },
     {
-        question: 'What is the answer 4?',
+        question: 'How many teams are in each group?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['4', 'correct'],
+            ['6', 'wrong'],
+            ['3', 'wrong'],
+            ['8', 'wrong'],
+        ],
     },
     {
-        question: 'What is the answer 5?',
+        question: 'How many groups are are there in the 2022 Qatar World Cup?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['8 groups', 'correct'],
+            ['16 groups', 'wrong'],
+            ['12 groups', 'wrong'],
+            ['6 groups', 'wrong'],
+        ],
     },
     {
-        question: 'What is the answer 6?',
+        question: "How many substitutions we're allowed in the 2014 Brazil World Cup?",
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['3', 'correct'],
+            ['5', 'wrong'],
+            ['4', 'wrong'],
+            ['6', 'wrong'],
+        ],
     },
     {
-        question: 'What is the answer 7?',
+        question: 'Which teams played the 2010 South Africa World Cup Final?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['Spain and Netherlands', 'correct'],
+            ['Argentina and Germany', 'wrong'],
+            ['France and Croatia', 'wrong'],
+            ['Brazil and Germany', 'wrong'],
+        ],
     },
     {
-        question: 'What is the answer 8?',
+        question: 'Which team has the most World Cup titles?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['Brazil', 'correct'],
+            ['Germany', 'wrong'],
+            ['Italy', 'wrong'],
+            ['France', 'wrong'],
+        ],
     },
     {
-        question: 'What is the answer 9?',
+        question: 'Which country hosted the 2006 World Cup?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['Germany', 'correct'],
+            ['France', 'wrong'],
+            ['USA', 'wrong'],
+            ['Russia', 'wrong'],
+        ],
     },
     {
-        question: 'What is the answer 10?',
+        question: 'What happened to Zinedine Zidane in the 2006 World Cup final?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['He was sent of with a red card', 'correct'],
+            ['Won the title with France', 'wrong'],
+            ['Scored 4 goals', 'wrong'],
+            ['Missed the last penalty shot', 'wrong'],
+        ],
     },
     {
-        question: 'What is the answer 11?',
+        question: 'How many titles did Pelé win with Brazil?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['3', 'correct'],
+            ['2', 'wrong'],
+            ['1', 'wrong'],
+            ['4', 'wrong'],
+        ],
     },
     {
-        question: 'What is the answer 12?',
+        question: 'How many matches does a team play to win the title?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['7 games', 'correct'],
+            ['6 games', 'wrong'],
+            ['8 games', 'wrong'],
+            ['5 games', 'wrong'],
+        ],
     },
     {
-        question: 'What is the answer 13?',
+        question: 'Which animal correctly predicted 7 games in the 2010 World Cup?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['Paul the octopus', 'correct'],
+            ['Sally the salamander', 'wrong'],
+            ['Mike the monkey', 'wrong'],
+            ['Emily the elephant', 'wrong'],
+        ],
     },
     {
-        question: 'What is the answer 14?',
+        question: 'How many players of each team start a match?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['11', 'correct'],
+            ['12', 'wrong'],
+            ['10', 'wrong'],
+            ['9', 'wrong'],
+        ],
     },
     {
-        question: 'What is the answer 15?',
+        question: 'How many stadiums will the 2022 Qatar World Cup have?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['8 stadiums', 'correct'],
+            ['6 stadiums', 'wrong'],
+            ['4 stadiums', 'wrong'],
+            ['3 stadiums', 'wrong'],
+        ],
     },
     {
-        question: 'What is the answer 16?',
+        question: 'Which player is the highest goalscorer in the World Cup tournaments?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['Klose', 'correct'],
+            ['Ronaldo', 'wrong'],
+            ['Pelé', 'wrong'],
+            ['Klinsmann', 'wrong'],
+        ],
     },
     {
-        question: 'What is the answer 17?',
+        question: 'How many minutes is the regular time?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['90 minutes', 'correct'],
+            ['80 minutes', 'wrong'],
+            ['70 minutes', 'wrong'],
+            ['60 minutes', 'wrong'],
+        ],
     },
     {
-        question: 'What is the answer 18?',
+        question: 'What is the maximun number of player each team can take to the 2022 World Cup?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['26 players', 'correct'],
+            ['24 players', 'wrong'],
+            ['23 players', 'wrong'],
+            ['20 players', 'wrong'],
+        ],
     },
     {
-        question: 'What is the answer 19?',
+        question: 'How many games do each team play in the group stage?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['3 games', 'correct'],
+            ['4 games', 'wrong'],
+            ['6 games', 'wrong'],
+            ['5 games', 'wrong'],
+        ],
     },
     {
-        question: 'What is the answer 20?',
+        question: 'How often does the World Cup happen?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
-        ]
+            ['Every 4 years', 'correct'],
+            ['Every 3 years', 'wrong'],
+            ['Every 2 years', 'wrong'],
+            ['Every 5 years', 'wrong'],
+        ],
     },
 ];
 
@@ -593,12 +593,12 @@ let groupStageArray = [
 
 let cupFinalArray = [
     {
-        question: 'What is the answer 1?',
+        question: 'What is the biggest win in a world cup game?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['Yugoslavia 9 x 0 Zaire (1974)', 'correct'],
+            ['Sweden 8 x 0 Cuba (1938)', 'wrong'],
+            ['Germany 8 x 0 Saudi Arabia (2002)', 'wrong'],
+            ['Uruguay 7 x 0 Scotland (1954)', 'wrong'],
         ]
     },
     {
