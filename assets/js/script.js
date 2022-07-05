@@ -570,7 +570,7 @@ let groupStageArray = [
         ],
     },
     {
-        question: 'How many games do each team play in the group stage?',
+        question: 'How many games does each team play in the group stage?',
         answers: [
             ['3 games', 'correct'],
             ['4 games', 'wrong'],
