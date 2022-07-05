@@ -105,11 +105,14 @@ function captureUser() {
 
 }
 
+/**
+ * Tests the pattern of the username input agains the regular expression.
+ */
 function testPattern() {
 
     // Allow uppercase, lowercase, numbers and underline, must have at least one alphabet and min 2 character
     // regular expression made with https://regex101.com
-    let regExp = /^(?=.*[a-zA-Z]{1,})(?=.*[\d]{0,})[a-zA-Z0-9_]{2,10}$/;
+    let regExp = /^(?=.*[a-zA-Z]{1,})(?=.*[\d]{0,})[a-zA-Z0-9_]{2,15}$/;
 
     return regExp.test(user);
 
@@ -294,6 +297,7 @@ function incrementScore() {
  */
 function nextRound() {
 
+    // Remove the Enter key eventListener for the next round.
     document.removeEventListener('keydown', eventEnter);
 
     if (round < 10) {
@@ -329,22 +333,22 @@ function endQuiz() {
         <span>${icon}</span>
         <h2>${message}</h2>
     </div>
-    <button id="play-again" class="btn-green-medium">Play again</button>
+    <button class="btn-green-medium" data-options="play-again">Play again</button>
     <br>
-    <button id="new-level" class="btn-green-medium">Choose level</button>
+    <button class="btn-green-medium" data-options="new-level">Choose level</button>
     <br>
-    <button id="exit" class="btn-green-medium">End game</button>
+    <button class="btn-green-medium" data-options="exit">End game</button>
     `;
 
 
     // Add event listeners to the options button
-    let buttons = document.getElementsByTagName('button');
+    let buttons = document.querySelectorAll('[data-options]');
 
     for (let button of buttons) {
         button.addEventListener('click', function() {
             
             // Get the button id
-            let id = this.getAttribute('id');
+            let id = this.getAttribute('data-options');
 
             switch(id) {
                 case 'play-again':
@@ -361,7 +365,7 @@ function endQuiz() {
                     location.reload();
                     break;
                 default:
-                    throw 'Unknown button';
+                    throw 'Unknown button at endQuiz()';
             }
 
         })
