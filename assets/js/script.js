@@ -61,13 +61,20 @@ function controls() {
 function soundButton() {
 
     let icon = document.getElementById('sound-btn');
+    let audioElements = document.getElementsByTagName('audio');
 
     if (icon.value == 'on') {
         icon.innerHTML = `<i class="fa-solid fa-volume-xmark"></i>`;
         icon.value = "off";
+        for (let audio of audioElements) {
+            audio.muted = true;
+        }
     } else {
         icon.innerHTML = `<i class="fa-solid fa-volume-high"></i>`;
         icon.value = "on";
+        for (let audio of audioElements) {
+            audio.muted = false;
+        }
     }
 
     audioClick.play();
