@@ -316,6 +316,7 @@ function endQuiz() {
     let icon;
     let message;
 
+    // Displays three different messages depending on the score
     if (score < 4) {
         icon = `<i class="fa-solid fa-futbol"></i>`;
         message = "Here's a football so you can practice!";
@@ -341,7 +342,7 @@ function endQuiz() {
     `;
 
 
-    // Add event listeners to the options button
+    // Add event listeners to the option buttons
     let buttons = document.querySelectorAll('[data-options]');
 
     for (let button of buttons) {
@@ -374,7 +375,6 @@ function endQuiz() {
 }
 
 // Array of questions and answers for the group stage level
-
 let groupStageArray = [
     {
         question: 'What is the answer 1?',

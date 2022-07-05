@@ -77,7 +77,6 @@ header > h1 > i {
     width: 50vw;
     height: 60vh;
     color: #2b2b2b;
-    font-family: 'Times New Roman', Times, serif;
     font-size: 1em;
     padding: 5vh 2.5vw;
     border: solid 5px purple;
@@ -220,4 +219,76 @@ footer a {
     position: absolute;
     top: 4px;
     right: 4px;
+}
+
+/* Large to medium screen sizes */
+
+@media screen and (max-width: 1200px) {
+    
+    #instructions {
+        width: 60vw;
+        height: 65vh;
+        top: 15vh;
+        left: 20vw;
+    }
+
+}
+
+/* Medium to small screen sizes */
+@media screen and (max-width: 900px) {
+
+    .quiz-area {
+        width: 70vw;
+    }
+
+    .quiz-area h2 {
+        font-size: 1.2em;
+    }
+    
+    #instructions {
+        width: 70vw;
+        left: 15vw;
+    }
+
+    .btn-answer {
+        width: 70%;
+    }
+
+}
+
+/* Smaller screen sizes */
+@media screen and (max-width: 600px) {
+
+    header {
+        margin: 5vh 0;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .quiz-area {
+        height: 70vh;
+        width: 90vw;
+    }
+
+    .quiz-area h2 {
+        font-size: 1em;
+    }
+
+    #instructions {
+        width: 90vw;
+        left: 5vw;
+    }
+
+    .btn-answer {
+        width: 90%;
+    }
+
+    .btn-green-medium {
+        height: 5vh;
+        width: 50%;
+        margin-top: 2vh;
+    }
+
 }
