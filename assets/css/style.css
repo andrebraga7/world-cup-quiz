@@ -280,8 +280,12 @@ footer a {
     }
 
     #instructions {
-        width: 90vw;
-        left: 5vw;
+        width: 95vw;
+        left: 2.5vw;
+    }
+
+    #instructions ul {
+        padding: 0 2vw;
     }
 
     #end-game-h2 {

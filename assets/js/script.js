@@ -595,181 +595,181 @@ let cupFinalArray = [
     {
         question: 'What is the biggest win in a world cup game?',
         answers: [
-            ['Yugoslavia 9 x 0 Zaire (1974)', 'correct'],
+            ['Hungary 10 x 1 El Salvador (1982)', 'correct'],
             ['Sweden 8 x 0 Cuba (1938)', 'wrong'],
             ['Germany 8 x 0 Saudi Arabia (2002)', 'wrong'],
             ['Uruguay 7 x 0 Scotland (1954)', 'wrong'],
         ]
     },
     {
-        question: 'What is the answer 2?',
+        question: 'When was the first FIFA World Cup tournament?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['1930 in Uruguay', 'correct'],
+            ['1934 in Italy', 'wrong'],
+            ['1938 in France', 'wrong'],
+            ['1936 in Switzerland', 'wrong'],
         ]
     },
     {
-        question: 'What is the answer 3?',
+        question: 'Which player has the most World Cup titles?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['Pelé with 3 titles', 'correct'],
+            ['Maradona with 2 titles', 'wrong'],
+            ['Zidane with 2 titles', 'wrong'],
+            ['Buffon with 3 titles', 'wrong'],
         ]
     },
     {
-        question: 'What is the answer 4?',
+        question: 'Which team has the most matches in the World Cup?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['Germany with 106', 'correct'],
+            ['Brazil with 110', 'wrong'],
+            ['Italy with 98', 'wrong'],
+            ['Argentina with 102', 'wrong'],
         ]
     },
     {
-        question: 'What is the answer 5?',
+        question: 'Which team reached the most finals?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['Germanu 8 times', 'correct'],
+            ['Brazil 7 times', 'wrong'],
+            ['Italy 8 times', 'wrong'],
+            ['Netherlands 6 times', 'wrong'],
         ]
     },
     {
-        question: 'What is the answer 6?',
+        question: 'Which team scored the first World Cup goal?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['France', 'correct'],
+            ['England', 'wrong'],
+            ['Argentina', 'wrong'],
+            ['Uruguay', 'wrong'],
         ]
     },
     {
-        question: 'What is the answer 7?',
+        question: 'Who is the oldest world champion?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['Dino Zoff (Italy) 40 years', 'correct'],
+            ['Maradona (Argentina) 36 years', 'wrong'],
+            ['Klinsmann (Germany) 38 years', 'wrong'],
+            ['Buffon (Italy) 39 years', 'wrong'],
         ]
     },
     {
-        question: 'What is the answer 8?',
+        question: 'Which team has had the most penalty shootouts?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['Argentina 5 times', 'correct'],
+            ['Netherlands 4 times', 'wrong'],
+            ['Spain 5 times', 'wrong'],
+            ['France 6 times', 'wrong'],
         ]
     },
     {
-        question: 'What is the answer 9?',
+        question: 'Which World Cup edition had the most goals?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['France 1998 with 171', 'correct'],
+            ['Brazil 1950 with 158', 'wrong'],
+            ['Sweden 1958 with 202', 'wrong'],
+            ['South Africa 2010 with 196', 'wrong'],
         ]
     },
     {
-        question: 'What is the answer 10?',
+        question: 'Which turnament was the first to use goal line technology?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['Brazil 2014', 'correct'],
+            ['Russia 2018', 'wrong'],
+            ['South Africa 2010', 'wrong'],
+            ['Germany 2006', 'wrong'],
         ]
     },
     {
-        question: 'What is the answer 11?',
+        question: 'Which game had the largest crowd?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['Brazil x Uruguay (1950) 173,850', 'correct'],
+            ['Italy x Czechoslovakia (1934) 125,342', 'wrong'],
+            ['Spain x Netherland (2010) 78,903', 'wrong'],
+            ['Germany x Hungary (1954) 134,678', 'wrong'],
         ]
     },
     {
-        question: 'What is the answer 12?',
+        question: 'What was the first edition to award 3 points to the winner?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['USA 1994', 'correct'],
+            ['Italy 1990', 'wrong'],
+            ['Mexico 1986', 'wrong'],
+            ['Spain 1982', 'wrong'],
         ]
     },
     {
-        question: 'What is the answer 13?',
+        question: 'Which tournament had the first penalty shootout?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['Spain 1982', 'correct'],
+            ['Urugay 1930', 'wrong'],
+            ['Chile 1962', 'wrong'],
+            ['Englan 1966', 'wrong'],
         ]
     },
     {
-        question: 'What is the answer 14?',
+        question: 'Which team have played in every edition?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['Brazil', 'correct'],
+            ['Italy', 'wrong'],
+            ['Cameroon', 'wrong'],
+            ['France', 'wrong'],
         ]
     },
     {
-        question: 'What is the answer 15?',
+        question: "When was the first FIFA Women's World Cup held?",
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['1991 in China', 'correct'],
+            ['1995 in Sweden', 'wrong'],
+            ['1987 in Portugal', 'wrong'],
+            ['1999 in USA', 'wrong'],
         ]
     },
     {
-        question: 'What is the answer 16?',
+        question: 'Which team has scored the most goals all together?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['Brazil 224', 'correct'],
+            ['Germany 220', 'wrong'],
+            ['Italy 231', 'wrong'],
+            ['France 226', 'wrong'],
         ]
     },
     {
-        question: 'What is the answer 17?',
+        question: 'Which player scored the most goals in a single tournament?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['Fontaine 13 goals', 'correct'],
+            ['Pelé 15 goals', 'wrong'],
+            ['Maradona 14 goals', 'wrong'],
+            ['Messi 12 goals', 'wrong'],
         ]
     },
     {
-        question: 'What is the answer 18?',
+        question: 'Who was the only goalkeeper to have ever won the Golden Ball trophy?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['Oliver Kahn', 'correct'],
+            ['Buffon', 'wrong'],
+            ['Gordon Banks', 'wrong'],
+            ['Iker Casillas', 'wrong'],
         ]
     },
     {
-        question: 'What is the answer 19?',
+        question: 'What is the offical pitch dimensions?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['105m x 68m', 'correct'],
+            ['100m x 70m', 'wrong'],
+            ['90m x 60m', 'wrong'],
+            ['110m x 70', 'wrong'],
         ]
     },
     {
-        question: 'What is the answer 20?',
+        question: 'How manny different teams have won the World Cup?',
         answers: [
-            ['answer1', 'correct'],
-            ['answer2', 'wrong'],
-            ['answer3', 'wrong'],
-            ['answer4', 'wrong'],
+            ['8 teams', 'correct'],
+            ['15 teams', 'wrong'],
+            ['12 teams', 'wrong'],
+            ['10 teams', 'wrong'],
         ]
     },
 ];
