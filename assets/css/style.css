@@ -104,7 +104,9 @@ header > h1 > i {
 /* footer */
 
 footer {
-    margin-top: 5vh;
+    width: 100%;
+    position: absolute;
+    bottom: 5vh;
 }
 
 footer a {
@@ -236,10 +238,6 @@ footer a {
     .quiz-area {
         width: 70vw;
     }
-
-    .quiz-area h2 {
-        font-size: 1.2em;
-    }
     
     #instructions {
         width: 70vw;
@@ -264,12 +262,21 @@ footer a {
     }
 
     .quiz-area {
-        height: 70vh;
-        width: 90vw;
+        height: 65vh;
+        width: 95vw;
     }
 
     .quiz-area h2 {
-        font-size: 1em;
+        padding: 10vh 5vw;
+    }
+
+    #question {
+        padding: 5vh 5vw;
+    }
+
+    #controls {
+        text-align: center;
+        padding: 0;
     }
 
     #instructions {
@@ -277,8 +284,21 @@ footer a {
         left: 5vw;
     }
 
+    #end-game-h2 {
+        padding: 6vh 0;
+    }
+
+    #result {
+        padding: 0;
+    }
+    
+    #result h2 {
+        padding: 3vh 0;
+        font-size: 1.2em;
+    }
+
     .btn-answer {
-        width: 90%;
+        width: 95%;
     }
 
     .btn-green-medium {

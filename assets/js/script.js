@@ -444,7 +444,7 @@ let groupStageArray = [
         ],
     },
     {
-        question: 'How many groups are are there in the 2022 Qatar World Cup?',
+        question: 'How many groups are there in the 2022 Qatar World Cup?',
         answers: [
             ['8 groups', 'correct'],
             ['16 groups', 'wrong'],
@@ -516,7 +516,7 @@ let groupStageArray = [
         ],
     },
     {
-        question: 'Which animal correctly predicted 7 games in the 2010 World Cup?',
+        question: 'Which animal correctly predicted 7 results in the 2010 World Cup?',
         answers: [
             ['Paul the octopus', 'correct'],
             ['Sally the salamander', 'wrong'],
@@ -561,7 +561,7 @@ let groupStageArray = [
         ],
     },
     {
-        question: 'What is the maximun number of player each team can take to the 2022 World Cup?',
+        question: 'What is the maximun number of players each team can take to the 2022 World Cup?',
         answers: [
             ['26 players', 'correct'],
             ['24 players', 'wrong'],
