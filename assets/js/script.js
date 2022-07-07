@@ -227,14 +227,6 @@ function runQuiz() {
 
     let question = quizQuestions[round -1].question;
     let answer = quizQuestions[round -1].answers;
-    let nextText;
-    
-    // Defines the text of the next round button depending on the round.
-    if (round === 10) {
-        nextText = 'View score';
-    } else {
-        nextText = 'Next round';
-    }
 
     // Template literals for the question and answers display.
     quizArea.innerHTML = `
@@ -250,7 +242,7 @@ function runQuiz() {
         <button class="btn-answer" data-answer="${answer[2][1]}">${answer[2][0]}</button>
         <button class="btn-answer" data-answer="${answer[3][1]}">${answer[3][0]}</button>
     </div>
-    <button id="next" class="btn-green-medium" value="no-click">${nextText}</button>
+    <button id="next" class="btn-green-medium" value="no-click">Next round</button>
     `;
 
     // Add event listeners to the answers button.
@@ -280,6 +272,15 @@ function checkAnswer(answerClicked, button, answerButtons,) {
         audioWrong.play();
     }
 
+    // Defines the text of the next round button depending on the round.
+
+    let nextText = document.getElementById('next');
+    if (round === 10) {
+        nextText.innerText = 'View score';
+    } else {
+        nextText.innerText = 'Next round';
+    }
+
     // call nextRound when next round button is clicked.
     let nextButton = document.getElementById('next');
 
@@ -292,10 +293,10 @@ function checkAnswer(answerClicked, button, answerButtons,) {
 }
 
 /**
- * The eventHandler for the Enter keydown
+ * The eventHandler for the Enter or Space keydown
  */
 function eventEnter(event) {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' || event.key === ' ') {
         audioClick.play();
         nextRound();
     }

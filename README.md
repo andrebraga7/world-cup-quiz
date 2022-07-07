@@ -16,26 +16,23 @@ You can follow the project along by visiting the [FIFA World Cup Quiz Game here]
 - [**User Experience UX**](#user-experience-ux)
     - [User stories](#user-stories)
     - [Wireframes](#wireframes)
-    - [Site structure](#site-structure)
+    - [Quiz structure](#quiz-structure)
     - [Design choices](#design-choices)
         - [*Typography*](#typography)
         - [*Colour scheme*](#colour-scheme)
 - [**Features**](#features)
-    - [Home](#home)
-        - [*Navigation*](#navigation)
-        - [*Hero image*](#hero-image)
-        - [*Our solutions*](#our-solutions)
-        - [*How we can help*](#how-we-can-help)
-        - [*Testimonials*](#testimonials)
+    - [Landing]()
+        - [*Quiz area*]()
+        - [*Controls*]()
         - [*Footer*](#footer)
-    - [About](#about)
-        - [*About cover image*](#about-cover-image)
-        - [*About us*](#about-us)
-        - [*Some of our projects*](#some-of-our-projects)
-    - [Contact](#contact)
-        - [*Contact cover image*](#contact-cover-image)
-        - [*Form*](#form)
-        - [*Form destination*](#form-destination)
+    - [Level selection]()
+        - [*Level options*]()
+    - [Quiz rounds]()
+        - [*Game info*]()
+        - [*Question and answers*]()
+    - [Results]()
+        - [*Score and feedback*]()
+        - [*Options*]()
     - [Future features](#future-features)
 - [**Technologies Used**](#technologies-used)
 - [**Testing**](#testing)
@@ -54,26 +51,28 @@ You can follow the project along by visiting the [FIFA World Cup Quiz Game here]
 ## User stories
 
 - As a user I want to understand the purpose of the site straight away;
-- As a user I want to be able to navigate through the whole site easily;
-- As a user I want to know how other customers experiences has been working with Akemi;
-- As a user I want to connect with Akemi on social media;
-- As a user I want to know more about Akemi;
-- As a user I want to see portfolio projects from Akemi;
-- As a user I want to easily be able to contact Akemi for more information.
+- As a user I want to have a personalized experience;
+- As a user I want to be able to have control of any media playback;
+- As a user I want to read any relevant instructions for the quiz;
+- As a user I want to select different levels of difficulty;
+- As a user I want to know how I'm progressing in the rounds;
+- As a user I want to know if selected the correct answer and if not which one was the right one;
+- As a user I want to see my score at the end of the quiz and have feedback on how I did;
+- As a user I want to have options to play again, select a new level or leave the quiz.
 
 [Back to table of content](#table-of-content)
 
 ## Wireframes
 
-The wireframes for the Akemi website were created using [Balsamiq](https://balsamiq.com/). The mobile version of the site was created following the main full width wireframe and adding adjustments as needed to acomodate the smaler screens.
+The wireframes for the quiz were created using [Balsamiq](https://balsamiq.com/). The mobile version of the quiz was created following the main full width wireframe and adding adjustments as needed to acomodate smaler screens.
 
 ![Wireframes](assets/readme-images/wireframes.png)
 
 [Back to table of content](#table-of-content)
 
-## Site structure
+## Quiz structure
 
-The website is composed of three pages, [**Home**](index.html), [**About**](about.html) and [**Contact**](contact.html). The home page is the primary landing page where the user is greated with a cover image that gives a first impression of what the website is about with a call to action button. The about and contact pages can be accessed throught the navigation menu on the header of the page. There is also links to all the pages on a secondary menu in the footer. All the call to action buttons link to the contact form.
+The quiz is composed of four stages, **Landing**, **Level selection**, **Quiz rounds** and **Results**. The landing is the primary welcome page where the user is greated with a header and a title that gives a first impression of what the website is about with a username input field and a kick-off button to start. At the bottom there are two controls, on that turns the sound off and on and a second one that opens the quiz instructions. When the user clicks on kick-off, the username is captured and a new code is loaded so the user can select his desired level. When the user selects the level, the quiz shuffles the corresponding level questions and randomly selects 10 for the game. The game is made up of 10 rounds with each question having 4 possible answers but only one correct. When the user clicks on an answer the code check to see if it's correct and if so, the button background turns green and the score board imcrements by one point. If the answer is wrong, the background turns red. A solid green border is displayed on the left side of the correct answer. Only after selecting an answer the user can then proceed to the next round. This carries on until the user reaches the last round, the next round button changes to view score when the answers is selected. The view score section shows the user's score and displays a different message depending on the result. Lastly the user can choose to play again, select a new level or end the game, which reloads the page and goes back to the landing.
 
 [Back to table of content](#table-of-content)
 
@@ -81,11 +80,10 @@ The website is composed of three pages, [**Home**](index.html), [**About**](abou
 
 - ### Typography
 
-    The font chosen for this project was [Inter](https://github.com/rsms/inter/) designed by [Rasmus Andersson](https://fonts.google.com/?query=Rasmus+Andersson). It has a fall back font of sans-serif. This font was chosen because it has a similar design to the company's logotype. It also has some great readability features like stated by the designer:
-    >Inter features a tall x-height to aid in readability of mixed-case and lower-case text. Several OpenType features are provided as well.
+    The font chosen for this project was [Orbitron](https://fonts.google.com/specimen/Orbitron). It has a fall back font of sans-serif. This font was chosen because it has a fun game like feel to it which helps with the user experience of playing a quiz game.
 
 - ### Colour scheme
-    The colour scheme chosen follows and builds upon the companys visual idendity, which relates to the application of renewable energies.
+    The colour scheme is bright and fun, the blue resembles the FIFA logo, the green relates to the colour of the football pitch and the purple integrates well with the other two to create a quiz game atmosphere.
 
     ![Colours](assets/readme-images/colors.png)
 
