@@ -1,108 +1,276 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Akemi Renewable Energies
 
-Welcome andrebraga7,
+FIFA World Cup Quiz Game, is a fun quiz game about fact of the FIFA World Cup tournaments. It challanges the user by asking different types of questions of every tournament in history. At the same time, the user can learn new unknown facts about the tournaments history and the legendary player throughout the years.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+### Project objectives
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+1. Create a quiz game that will challenge the user in different levels of knowledge about the tournament;
+2. Teach the user new fact about the FIFA World Cup;
 
-## Gitpod Reminders
+You can follow the project along by visiting the [FIFA World Cup Quiz Game here](https://andrebraga7.github.io/world-cup-quiz)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+![Website responsive design](assets/readme-images/responsive-design.jpg)
 
-`python3 -m http.server`
+# Table of content
 
-A blue button should appear to click: _Make Public_,
+- [**User Experience UX**](#user-experience-ux)
+    - [User stories](#user-stories)
+    - [Wireframes](#wireframes)
+    - [Site structure](#site-structure)
+    - [Design choices](#design-choices)
+        - [*Typography*](#typography)
+        - [*Colour scheme*](#colour-scheme)
+- [**Features**](#features)
+    - [Home](#home)
+        - [*Navigation*](#navigation)
+        - [*Hero image*](#hero-image)
+        - [*Our solutions*](#our-solutions)
+        - [*How we can help*](#how-we-can-help)
+        - [*Testimonials*](#testimonials)
+        - [*Footer*](#footer)
+    - [About](#about)
+        - [*About cover image*](#about-cover-image)
+        - [*About us*](#about-us)
+        - [*Some of our projects*](#some-of-our-projects)
+    - [Contact](#contact)
+        - [*Contact cover image*](#contact-cover-image)
+        - [*Form*](#form)
+        - [*Form destination*](#form-destination)
+    - [Future features](#future-features)
+- [**Technologies Used**](#technologies-used)
+- [**Testing**](#testing)
+- [**Deployment**](#deployment)
+    - [To deploy the website](#to-deploy-the-website)
+    - [To fork the repository on GitHub](#to-fork-the-repository-on-github)
+    - [To create a local clone of the project](#to-create-a-local-clone-of-the-project)
+- [**Credits**](#credits)
+    - [Content](#content)
+    - [Media](#media)
+- [**Acknowledgements**](#acknowledgements)
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# User Experience (UX)
 
-A blue button should appear to click: _Make Public_,
+## User stories
 
-Another blue button should appear to click: _Open Browser_.
+- As a user I want to understand the purpose of the site straight away;
+- As a user I want to be able to navigate through the whole site easily;
+- As a user I want to know how other customers experiences has been working with Akemi;
+- As a user I want to connect with Akemi on social media;
+- As a user I want to know more about Akemi;
+- As a user I want to see portfolio projects from Akemi;
+- As a user I want to easily be able to contact Akemi for more information.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+[Back to table of content](#table-of-content)
 
-To log into the Heroku toolbelt CLI:
+## Wireframes
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+The wireframes for the Akemi website were created using [Balsamiq](https://balsamiq.com/). The mobile version of the site was created following the main full width wireframe and adding adjustments as needed to acomodate the smaler screens.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+![Wireframes](assets/readme-images/wireframes.png)
 
-------
+[Back to table of content](#table-of-content)
 
-## Release History
+## Site structure
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+The website is composed of three pages, [**Home**](index.html), [**About**](about.html) and [**Contact**](contact.html). The home page is the primary landing page where the user is greated with a cover image that gives a first impression of what the website is about with a call to action button. The about and contact pages can be accessed throught the navigation menu on the header of the page. There is also links to all the pages on a secondary menu in the footer. All the call to action buttons link to the contact form.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+[Back to table of content](#table-of-content)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## Design choices
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- ### Typography
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+    The font chosen for this project was [Inter](https://github.com/rsms/inter/) designed by [Rasmus Andersson](https://fonts.google.com/?query=Rasmus+Andersson). It has a fall back font of sans-serif. This font was chosen because it has a similar design to the company's logotype. It also has some great readability features like stated by the designer:
+    >Inter features a tall x-height to aid in readability of mixed-case and lower-case text. Several OpenType features are provided as well.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- ### Colour scheme
+    The colour scheme chosen follows and builds upon the companys visual idendity, which relates to the application of renewable energies.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+    ![Colours](assets/readme-images/colors.png)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+[Back to table of content](#table-of-content)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+# Features
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+The Akemi website is designed and laid out following the common sense website design, which contains a navaigation menu on the top of each page, relevant content in the middle section and a footer at the very bottom. It also follows good practice of UX generating a welcoming feelling encouraging the user to explore all of it's features whilst providing usefull information about the company and it's solutions, projects and contact information.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Home
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- ### Navigation
+    Located at the very top of each page, it has a responsive deisign containing the company's logo which is clickable and links back to the home page. It also has navigation links to the other pages with a thick white border underlining the active page, which provides feedback to the user on what page he is currently on.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+    ![Navigation menu](assets/readme-images/menu.jpg)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+[Back to table of content](#table-of-content)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- ### Hero image
+    Bellow the menu comes the websites main hero image. It sets the mood straight away whilst also providing visual clues of what the site is about. On top of the image there is a first call to action text with a button, that invites the user to fill in his contact information in exchange of booking a free call with one of the companys specialist. The call to action button links to the contact form.
 
-------
+    ![Hero image](assets/readme-images/hero-image.jpg)
 
-## FAQ about the uptime script
+[Back to table of content](#table-of-content)
 
-**Why have you added this script?**
+- ### Our solutions
+    The our solutions sections, provides the user with information about what types of renewable energy the company works with and some of the benefits of each type. Information is displayed on top of a relevant background for each of the energy types, following the same design principle for the website. On smaller screens they sit on top of each other.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+    ![Our solutions](assets/readme-images/our-solutions.jpg)
 
-**How will this affect me?**
+[Back to table of content](#table-of-content)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- ### How we can help
+    This section focuses on providing more information to the user about the different types of customers the company works with. Giving a brief introduction on each typer of application.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+    ![How we can help](assets/readme-images/how-we-help.jpg)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+[Back to table of content](#table-of-content)
 
-**So….?**
+- ### Testimonials
+    This section brings three testimonies showing the different possibilities and applications of Akemis renewable energy solutions and the feedback customers feedback, providing value for the user
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+    ![Call to action](assets/readme-images/testimonials.jpg)
 
-**Can I opt out?**
+[Back to table of content](#table-of-content)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- ### Footer
+    The footer section at the very bottom of each page has a responsive design and is made up of the following features:
+    - The companys logo which is clikable and links to the top of the home page;
+    - A navigation meny with links to all the pages and a user feedback thick white border underlining the active page;
+    - The companys contact information and address;
+    - The websites copyright informations;
+    - Social media links.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+    ![Footer](assets/readme-images/footer.jpg)
 
-**Anything more?**
+[Back to table of content](#table-of-content)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+## About
 
----
+- ### About cover image
+    The cover image is represented by a commercial container building with solar panels on the roof which relates to what the company is about. It also has a title on top of the image that gives further explanation of the purpose of the about page.
 
-Happy coding!
+    ![About cover image](assets/readme-images/about.jpg)
+
+[Back to table of content](#table-of-content)
+
+- ### About us
+    The about us section gives a brief introduction to the history and business of the company.
+
+    ![About us](assets/readme-images/about-us.jpg)
+
+[Back to table of content](#table-of-content)
+
+- ### Some of our projects
+    This section showcases some of the company projects. It has three items with an image and description with details of the project. It gives users and idea of what is possible and what they can expect as a result from the companys solutions.
+
+    ![Some of our projects](assets/readme-images/our-projects.jpg)
+
+[Back to table of content](#table-of-content)
+
+## Contact
+
+- ### Contact cover image
+    The contact cover image displays an engineer inspecting a solar panel in a solar farm. This gives further visual clues for the user of the support that can be expected. It also contains a title encouraging the user to contact the company.
+
+    ![Contact cover image](assets/readme-images/contact.jpg)
+
+[Back to table of content](#table-of-content)
+
+- ### Form
+    - The form section provides the user with an option to contact the company by providing aditional information. The form has 5 text input fields: First name, Last name, Email, Phone number and the user message. All the fields have labels assigned.
+    - At the bottom of the form there are the send and reset button.
+
+    ![Form](assets/readme-images/form.jpg)
+
+[Back to table of content](#table-of-content)
+
+- ### Form destination
+    - For the purpose of this project, the form does not post the data anywhere, it simply loads the form destination page. This would be changed on a live version of the website.
+
+    ![Form destination](assets/readme-images/form-destination.jpg)
+
+[Back to table of content](#table-of-content)
+
+## Future features
+
+- A hamburguer menu for smaller screens;
+- Create an image carousel on each project of the some of our projects section;
+- Add a pop-up display confirmation for when the contact form is submited.
+
+[Back to table of content](#table-of-content)
+
+# Technologies Used
+
+- [HTML5](https://html.spec.whatwg.org/multipage/) - provides the structure for the content of the website;
+- [CSS3](https://www.w3.org/Style/CSS/Overview.en.html) - styles the content of the page;
+- [Gitpod](https://www.gitpod.io/) - used to edit the website;
+- [GitHub](https://github.com/) - used to host and deploy the website.
+
+[Back to table of content](#table-of-content)
+
+# Testing
+Please refer to the [**TESTING**](TESTING.md) file for more information about the testing of Akemi Renewable Energies.
+
+[Back to table of content](#table-of-content)
+
+# Deployment
+
+## To deploy the website
+The website was deplyoed to GitHub pages. You can fallow the steps below to deploy a webpage:
+
+1. In the GitHub repository, click on the **Settings** tab;
+2. Select the **Pages** option on the left hand side;
+3. Under source, set the Branch to **main** and click on **Save**;
+4. Once the changes are saved, a link to the live website will appear on the top of the page. It may take a few minutes until the website is published.
+
+You can access the GitHub repository by clicking the following link: [https://github.com/andrebraga7/akemi](https://github.com/andrebraga7/akemi)
+
+![Deployment](assets/readme-images/deployment.jpg)
+
+[Back to table of content](#table-of-content)
+
+## To fork the repository on GitHub
+You can create a copy of the repository by forking the GitHub account. This copy can be changed and edited without affecting the original repository. Follow the steps below to fork the repository:
+
+1. Log in to the GitHub account and locate the [repositoty](https://github.com/andrebraga7/akemi);
+2. On the top right hand side of the page, click the **Fork** button to create a copy of the original repository on your GitHub account.
+
+![Fork](assets/readme-images/fork.jpg)
+
+[Back to table of content](#table-of-content)
+
+## To create a local clone of the project
+To create a clone of the project from GitHub, folow the steps below:
+
+1. In the repository page, click on the **Code** tab;
+2. On the **Clone HTTPS** section, click the copy button to copy the repository URL;
+
+![Clone](assets/readme-images/clone.jpg)
+
+3. In your IDE of choice, open **Git Bash**;
+4. Change the current working directory to the location where you want the cloned directory to be made;
+5. Type **git clone** and then paste the URL copied from GitHub;
+6. Press **enter** to create the local clone.
+
+[Back to table of content](#table-of-content)
+
+# Credits
+
+## Content
+- The **Inter** font used is from [**Google Fonts**](https://fonts.google.com/specimen/Inter?query=inter) and was created by [**Rasmus Andersson**](https://fonts.google.com/?query=Rasmus+Andersson);
+- The icons used are from [**Font Awesome**](https://fontawesome.com/);
+- [**Balsamiq**](https://balsamiq.com/wireframes/) was used to create the wireframes.
+
+## Media
+- All the photos used came from royalty free stock from [**Pexels**](https://www.pexels.com), [**Pixabay**](https://pixabay.com) and [**Unsplash**](https://unsplash.com);
+- The link for each individual image can be found as a comment in the code;
+- The Akemi logo and visual identity was provided by the company's owner [**Filipe Braga**](https://www.linkedin.com/in/filipe-braga-a8795b19/).
+
+[Back to table of content](#table-of-content)
+
+# Acknowledgements
+This website was created as the first portfolio project for the Full Stack Software Developer course from [**Code Institute**](https://codeinstitute.net). I would like to thank my mentor, [**Precious Ijege**](https://www.linkedin.com/in/precious-ijege-908a00168/) for his guidance and support throught this project and the Code Institute team.
+
+[**Andre Braga**](https://www.linkedin.com/in/andrestrevisan/) 2022
+
+[Back to table of content](#table-of-content)

@@ -41,6 +41,7 @@ header > h1 > i {
     border: solid 1px navy;
     border-radius: 20px;
     background-color: #fafafa;
+    overflow: scroll;
 }
 
 .quiz-area > h2 {
