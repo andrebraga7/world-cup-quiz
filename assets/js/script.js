@@ -66,12 +66,14 @@ function soundButton() {
     if (icon.value == 'on') {
         icon.innerHTML = `<i class="fa-solid fa-volume-xmark"></i>`;
         icon.value = "off";
+        icon.ariaLabel = "turn sound on"
         for (let audio of audioElements) {
             audio.muted = true;
         }
     } else {
         icon.innerHTML = `<i class="fa-solid fa-volume-high"></i>`;
         icon.value = "on";
+        icon.ariaLabel = "turn sound off"
         for (let audio of audioElements) {
             audio.muted = false;
         }
@@ -127,7 +129,7 @@ function captureUser() {
 }
 
 /**
- * Tests the pattern of the username input agains the regular expression.
+ * Tests the pattern of the username input against the regular expression.
  */
 function testPattern() {
 
@@ -225,6 +227,14 @@ function runQuiz() {
 
     let question = quizQuestions[round -1].question;
     let answer = quizQuestions[round -1].answers;
+    let nextText;
+    
+    // Defines the text of the next round button depending on the round.
+    if (round === 10) {
+        nextText = 'View score';
+    } else {
+        nextText = 'Next round';
+    }
 
     // Template literals for the question and answers display.
     quizArea.innerHTML = `
@@ -240,7 +250,7 @@ function runQuiz() {
         <button class="btn-answer" data-answer="${answer[2][1]}">${answer[2][0]}</button>
         <button class="btn-answer" data-answer="${answer[3][1]}">${answer[3][0]}</button>
     </div>
-    <button id="next" class="btn-green-medium" value="no-click">Next round</button>
+    <button id="next" class="btn-green-medium" value="no-click">${nextText}</button>
     `;
 
     // Add event listeners to the answers button.
@@ -292,7 +302,7 @@ function eventEnter(event) {
 }
 
 /**
- * Adds a bborder to the correct answer and disables the buttons.
+ * Adds a border to the correct answer and disables the buttons.
  */
 function buttonStyles(button, answerButtons) {
 
@@ -593,7 +603,7 @@ let groupStageArray = [
 
 let cupFinalArray = [
     {
-        question: 'What is the biggest win in a world cup game?',
+        question: 'Which was the biggest win in a world cup game?',
         answers: [
             ['Hungary 10 x 1 El Salvador (1982)', 'correct'],
             ['Sweden 8 x 0 Cuba (1938)', 'wrong'],
@@ -710,7 +720,7 @@ let cupFinalArray = [
         ]
     },
     {
-        question: 'Which team have played in every edition?',
+        question: 'Which team has played in every edition?',
         answers: [
             ['Brazil', 'correct'],
             ['Italy', 'wrong'],

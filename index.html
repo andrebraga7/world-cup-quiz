@@ -25,19 +25,19 @@
         <div id="quiz-area" class="quiz-area">
             <h2>Welcome to the FIFA World Cup quiz game!</h2>
             <label for="username">Please enter your username:</label>
-            <input type="text" id="username" placeholder="your-username" maxlength="15">
+            <input type="text" id="username" placeholder="min 2 char" maxlength="15">
             <p id="empty-username">Please fill in your username correctly!</p>
             <button id="submit" class="btn-green">Submit</button>
         </div>
         <div id="controls">
-            <button id="sound-btn" value="on" class="btn-controls"><i class="fa-solid fa-volume-high"></i></button>
+            <button id="sound-btn" value="on" class="btn-controls" aria-label="turn sound off"><i class="fa-solid fa-volume-high"></i></button>
             <button id="instructions-btn" data-button="instructions" value="hidden" class="btn-controls">Instructions</button>
         </div>
     </main>
 
     <!-- game instructions -->
     <article id="instructions">
-        <button id="instructions-close" data-button="instructions" value="hidden" class="btn-controls">X</button>
+        <button id="instructions-close" data-button="instructions" value="hidden" class="btn-controls" aria-label="close">X</button>
         <h2>Quiz instructions</h2>
         <p>These are the main quiz instructions that you must follow:</p>
         <ul>
@@ -57,11 +57,11 @@
     </footer>
 
     <!-- audios for clicks -->
-    <audio id="audio-click" src="assets/sounds/click.mp3"></audio>
-    <audio id="audio-correct" src="assets/sounds/correct.mp3"></audio>
-    <audio id="audio-wrong" src="assets/sounds/wrong.mp3"></audio>
-    <audio id="audio-success" src="assets/sounds/success.mp3"></audio>
-    <audio id="audio-failure" src="assets/sounds/failure.mp3"></audio>
+    <audio id="audio-click" src="assets/sounds/click.mp3" aria-label="click"></audio>
+    <audio id="audio-correct" src="assets/sounds/correct.mp3" aria-label="correct"></audio>
+    <audio id="audio-wrong" src="assets/sounds/wrong.mp3" aria-label="wrong"></audio>
+    <audio id="audio-success" src="assets/sounds/success.mp3" aria-label="triumph"></audio>
+    <audio id="audio-failure" src="assets/sounds/failure.mp3" aria-label="defeat"></audio>
 
     <!-- font awsome script-->
     <script src="https://kit.fontawesome.com/cc815c4944.js" crossorigin="anonymous"></script>
