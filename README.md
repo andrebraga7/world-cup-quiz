@@ -119,9 +119,9 @@ The FIFA World Cup Quiz Game uses a simple user firendly interface designed to c
 ## Level selections
 
 - ### Level options
-    The cover image is represented by a commercial container building with solar panels on the roof which relates to what the company is about. It also has a title on top of the image that gives further explanation of the purpose of the about page.
+    The level selection is loaded when the user submits the username. It then display the username and asks the user to select a level to play the quiz. There are two levels: **Group stage** (the easier level) and **Cup final** (the harder level). The names of the levels come from the FIFA World Cup tournament, having the games in the group stage before advancing to the cup final. When the user click on a level, the code ramdomly shuffles the corresponding array of questions and selects the first 10. it then shuffles the answers order for each individual question out of the 10 selected. This makes it more interesting by not repeating the same questions in the same order with and having the answers display in a different order every time.
 
-    ![About cover image](assets/readme-images/about.jpg)
+    ![About cover image](assets/readme-images/level-selection.jpg)
 
 [Back to table of content](#table-of-content)
 
