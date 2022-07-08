@@ -96,21 +96,21 @@ The FIFA World Cup Quiz Game uses a simple user firendly interface designed to c
 ## Landing
 
 - ### Quiz area
-    Located at the very top of each page, it has a responsive deisign containing the company's logo which is clickable and links back to the home page. It also has navigation links to the other pages with a thick white border underlining the active page, which provides feedback to the user on what page he is currently on.
+    The very first page that the user sees. It has a header with the name of the quiz, a username input field with a label asking the user to enter his username and a "Kick-off" button, that submits and validades the username when clicked. The username has to be a minimum of 2 and a maximum of 15 alphanumeric characters including underline and at least one alphabet.
 
     ![Navigation menu](assets/readme-images/quiz-area.jpg)
 
 [Back to table of content](#table-of-content)
 
 - ### Controls
-    Bellow the menu comes the websites main hero image. It sets the mood straight away whilst also providing visual clues of what the site is about. On top of the image there is a first call to action text with a button, that invites the user to fill in his contact information in exchange of booking a free call with one of the companys specialist. The call to action button links to the contact form.
+    Bellow the quiz area there are two controls. The first one is a sound off and on toggle switch and the second button opens and closes the instructions when clicked. These controls remain visible throught the quiz.
 
     ![Hero image](assets/readme-images/controls.jpg)
 
 [Back to table of content](#table-of-content)
 
 - ### Footer
-    The our solutions sections, provides the user with information about what types of renewable energy the company works with and some of the benefits of each type. Information is displayed on top of a relevant background for each of the energy types, following the same design principle for the website. On smaller screens they sit on top of each other.
+    At the very bottom of the page there is a simple footer with copyright information, a link to LinkedIn and GitHub. The design was thought to be very minimalistic not to distract the user from the main purpose which is the quiz.
 
     ![Our solutions](assets/readme-images/footer.jpg)
 
