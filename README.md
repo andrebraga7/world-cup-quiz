@@ -83,7 +83,7 @@ The quiz is composed of four stages, **Landing**, **Level selection**, **Quiz ro
     The font chosen for this project was [Orbitron](https://fonts.google.com/specimen/Orbitron). It has a fall back font of sans-serif. This font was chosen because it has a fun game like feel to it which helps with the user experience of playing a quiz game.
 
 - ### Colour scheme
-    The colour scheme is bright and fun, the blue resembles the FIFA logo, the green relates to the colour of the football pitch and the purple integrates well with the other two to create a quiz game atmosphere.
+    The colour scheme is bright and fun, the blue resembles the FIFA logo, the green relates to the colour of the football pitch, the purple and gold integrate well with the other two to create a quiz game atmosphere.
 
     ![Colours](assets/readme-images/colors.png)
 
@@ -91,101 +91,54 @@ The quiz is composed of four stages, **Landing**, **Level selection**, **Quiz ro
 
 # Features
 
-The Akemi website is designed and laid out following the common sense website design, which contains a navaigation menu on the top of each page, relevant content in the middle section and a footer at the very bottom. It also follows good practice of UX generating a welcoming feelling encouraging the user to explore all of it's features whilst providing usefull information about the company and it's solutions, projects and contact information.
+The FIFA World Cup Quiz Game uses a simple user firendly interface designed to create a game like atmosphere encouraging the user to interact with all of the features and enjoy the quiz. The interface changes depending on the stage of the quiz. This is done by modifing the HTML code as the user progresses and interacts.
 
-## Home
+## Landing
 
-- ### Navigation
+- ### Quiz area
     Located at the very top of each page, it has a responsive deisign containing the company's logo which is clickable and links back to the home page. It also has navigation links to the other pages with a thick white border underlining the active page, which provides feedback to the user on what page he is currently on.
 
-    ![Navigation menu](assets/readme-images/menu.jpg)
+    ![Navigation menu](assets/readme-images/quiz-area.jpg)
 
 [Back to table of content](#table-of-content)
 
-- ### Hero image
+- ### Controls
     Bellow the menu comes the websites main hero image. It sets the mood straight away whilst also providing visual clues of what the site is about. On top of the image there is a first call to action text with a button, that invites the user to fill in his contact information in exchange of booking a free call with one of the companys specialist. The call to action button links to the contact form.
 
-    ![Hero image](assets/readme-images/hero-image.jpg)
-
-[Back to table of content](#table-of-content)
-
-- ### Our solutions
-    The our solutions sections, provides the user with information about what types of renewable energy the company works with and some of the benefits of each type. Information is displayed on top of a relevant background for each of the energy types, following the same design principle for the website. On smaller screens they sit on top of each other.
-
-    ![Our solutions](assets/readme-images/our-solutions.jpg)
-
-[Back to table of content](#table-of-content)
-
-- ### How we can help
-    This section focuses on providing more information to the user about the different types of customers the company works with. Giving a brief introduction on each typer of application.
-
-    ![How we can help](assets/readme-images/how-we-help.jpg)
-
-[Back to table of content](#table-of-content)
-
-- ### Testimonials
-    This section brings three testimonies showing the different possibilities and applications of Akemis renewable energy solutions and the feedback customers feedback, providing value for the user
-
-    ![Call to action](assets/readme-images/testimonials.jpg)
+    ![Hero image](assets/readme-images/controls.jpg)
 
 [Back to table of content](#table-of-content)
 
 - ### Footer
-    The footer section at the very bottom of each page has a responsive design and is made up of the following features:
-    - The companys logo which is clikable and links to the top of the home page;
-    - A navigation meny with links to all the pages and a user feedback thick white border underlining the active page;
-    - The companys contact information and address;
-    - The websites copyright informations;
-    - Social media links.
+    The our solutions sections, provides the user with information about what types of renewable energy the company works with and some of the benefits of each type. Information is displayed on top of a relevant background for each of the energy types, following the same design principle for the website. On smaller screens they sit on top of each other.
 
-    ![Footer](assets/readme-images/footer.jpg)
+    ![Our solutions](assets/readme-images/footer.jpg)
 
 [Back to table of content](#table-of-content)
 
-## About
+## Level selections
 
-- ### About cover image
+- ### Level options
     The cover image is represented by a commercial container building with solar panels on the roof which relates to what the company is about. It also has a title on top of the image that gives further explanation of the purpose of the about page.
 
     ![About cover image](assets/readme-images/about.jpg)
 
 [Back to table of content](#table-of-content)
 
-- ### About us
-    The about us section gives a brief introduction to the history and business of the company.
+## Quiz round
 
-    ![About us](assets/readme-images/about-us.jpg)
-
-[Back to table of content](#table-of-content)
-
-- ### Some of our projects
-    This section showcases some of the company projects. It has three items with an image and description with details of the project. It gives users and idea of what is possible and what they can expect as a result from the companys solutions.
-
-    ![Some of our projects](assets/readme-images/our-projects.jpg)
-
-[Back to table of content](#table-of-content)
-
-## Contact
-
-- ### Contact cover image
+- ### Game info
     The contact cover image displays an engineer inspecting a solar panel in a solar farm. This gives further visual clues for the user of the support that can be expected. It also contains a title encouraging the user to contact the company.
 
     ![Contact cover image](assets/readme-images/contact.jpg)
 
 [Back to table of content](#table-of-content)
 
-- ### Form
+- ### Question and answers
     - The form section provides the user with an option to contact the company by providing aditional information. The form has 5 text input fields: First name, Last name, Email, Phone number and the user message. All the fields have labels assigned.
     - At the bottom of the form there are the send and reset button.
 
     ![Form](assets/readme-images/form.jpg)
-
-[Back to table of content](#table-of-content)
-
-- ### Form destination
-    - For the purpose of this project, the form does not post the data anywhere, it simply loads the form destination page. This would be changed on a live version of the website.
-
-    ![Form destination](assets/readme-images/form-destination.jpg)
 
 [Back to table of content](#table-of-content)
 
@@ -201,13 +154,14 @@ The Akemi website is designed and laid out following the common sense website de
 
 - [HTML5](https://html.spec.whatwg.org/multipage/) - provides the structure for the content of the website;
 - [CSS3](https://www.w3.org/Style/CSS/Overview.en.html) - styles the content of the page;
+- [JavaScript](https://www.javascript.com/) - adds functionality to the code;
 - [Gitpod](https://www.gitpod.io/) - used to edit the website;
 - [GitHub](https://github.com/) - used to host and deploy the website.
 
 [Back to table of content](#table-of-content)
 
 # Testing
-Please refer to the [**TESTING**](TESTING.md) file for more information about the testing of Akemi Renewable Energies.
+Please refer to the [**TESTING**](TESTING.md) file for more information about the testing of FIFA World Cup Quiz Game.
 
 [Back to table of content](#table-of-content)
 
@@ -255,19 +209,20 @@ To create a clone of the project from GitHub, folow the steps below:
 # Credits
 
 ## Content
-- The **Inter** font used is from [**Google Fonts**](https://fonts.google.com/specimen/Inter?query=inter) and was created by [**Rasmus Andersson**](https://fonts.google.com/?query=Rasmus+Andersson);
+- The **Orbitron** font used is from [**Google Fonts**](https://fonts.google.com/specimen/Orbitron) and was designed by [Matt McInerney](https://fonts.google.com/?query=Matt+McInerney);
 - The icons used are from [**Font Awesome**](https://fontawesome.com/);
 - [**Balsamiq**](https://balsamiq.com/wireframes/) was used to create the wireframes.
+- The Fisher Yates method was used to randomly shuffle the questions and answers and an exemple of the code can be found [here](https://bost.ocks.org/mike/shuffle/);
+- [**regex101**](https://regex101.com/) was used to create the regular expression that is used to check if the username provided by the user is valid.
 
 ## Media
-- All the photos used came from royalty free stock from [**Pexels**](https://www.pexels.com), [**Pixabay**](https://pixabay.com) and [**Unsplash**](https://unsplash.com);
-- The link for each individual image can be found as a comment in the code;
-- The Akemi logo and visual identity was provided by the company's owner [**Filipe Braga**](https://www.linkedin.com/in/filipe-braga-a8795b19/).
+- All the sound effects used came from royalty free stock from [**Pixabay**](https://pixabay.com/sound-effects/);
+- The link for each individual  can be found as a comment in the code;
 
 [Back to table of content](#table-of-content)
 
 # Acknowledgements
-This website was created as the first portfolio project for the Full Stack Software Developer course from [**Code Institute**](https://codeinstitute.net). I would like to thank my mentor, [**Precious Ijege**](https://www.linkedin.com/in/precious-ijege-908a00168/) for his guidance and support throught this project and the Code Institute team.
+This quiz game was creates as the second portfolio project for the Full Stack Software Developer course from [**Code Institute**](https://codeinstitute.net). I would like to thank my mentor, [**Precious Ijege**](https://www.linkedin.com/in/precious-ijege-908a00168/) for his guidance and support throught this project and the Code Institute team.
 
 [**Andre Braga**](https://www.linkedin.com/in/andrestrevisan/) 2022
 
