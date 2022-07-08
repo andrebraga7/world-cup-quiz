@@ -30,6 +30,9 @@ You can follow the project along by visiting the [FIFA World Cup Quiz Game here]
     - [Quiz rounds]()
         - [*Game info*]()
         - [*Question and answers*]()
+        - [*Correct answer*]()
+        - [*Wrong answer*]()
+        - [*View score*]()
     - [Results]()
         - [*Score and feedback*]()
         - [*Options*]()
@@ -98,47 +101,68 @@ The FIFA World Cup Quiz Game uses a simple user firendly interface designed to c
 - ### Quiz area
     The very first page that the user sees. It has a header with the name of the quiz, a username input field with a label asking the user to enter his username and a "Kick-off" button, that submits and validades the username when clicked. The username has to be a minimum of 2 and a maximum of 15 alphanumeric characters including underline and at least one alphabet.
 
-    ![Navigation menu](assets/readme-images/quiz-area.jpg)
+    ![Quiz area](assets/readme-images/quiz-area.jpg)
 
 [Back to table of content](#table-of-content)
 
 - ### Controls
     Bellow the quiz area there are two controls. The first one is a sound off and on toggle switch and the second button opens and closes the instructions when clicked. These controls remain visible throught the quiz.
 
-    ![Hero image](assets/readme-images/controls.jpg)
+    ![Controls](assets/readme-images/controls.jpg)
 
 [Back to table of content](#table-of-content)
 
 - ### Footer
     At the very bottom of the page there is a simple footer with copyright information, a link to LinkedIn and GitHub. The design was thought to be very minimalistic not to distract the user from the main purpose which is the quiz.
 
-    ![Our solutions](assets/readme-images/footer.jpg)
+    ![Footer](assets/readme-images/footer.jpg)
 
 [Back to table of content](#table-of-content)
 
-## Level selections
+## Level selection
 
 - ### Level options
     The level selection is loaded when the user submits the username. It then display the username and asks the user to select a level to play the quiz. There are two levels: **Group stage** (the easier level) and **Cup final** (the harder level). The names of the levels come from the FIFA World Cup tournament, having the games in the group stage before advancing to the cup final. When the user click on a level, the code ramdomly shuffles the corresponding array of questions and selects the first 10. it then shuffles the answers order for each individual question out of the 10 selected. This makes it more interesting by not repeating the same questions in the same order with and having the answers display in a different order every time.
 
-    ![About cover image](assets/readme-images/level-selection.jpg)
+    ![Level options](assets/readme-images/level-selection.jpg)
 
 [Back to table of content](#table-of-content)
 
 ## Quiz round
 
 - ### Game info
-    The contact cover image displays an engineer inspecting a solar panel in a solar farm. This gives further visual clues for the user of the support that can be expected. It also contains a title encouraging the user to contact the company.
+    The game info located on the top part of the quiz area shows the username, score and which round the quiz is on. The score is updated when the user clicks on the correct answer. The round is incremented by one when the user click on the Next round button.
 
-    ![Contact cover image](assets/readme-images/contact.jpg)
+    ![Game info](assets/readme-images/game-info.jpg)
 
 [Back to table of content](#table-of-content)
 
 - ### Question and answers
-    - The form section provides the user with an option to contact the company by providing aditional information. The form has 5 text input fields: First name, Last name, Email, Phone number and the user message. All the fields have labels assigned.
-    - At the bottom of the form there are the send and reset button.
+    - The question is displayed bellow the game info and above the answers. Everytime the user plays the quiz it randomly shuffles and selects 10 questions from the level array corresponding to the selected level by the user;
+    - There are always four answers shown with only one being correct. Eveytime the user plays the quiz, it shuffles the order of the four answers.
 
-    ![Form](assets/readme-images/form.jpg)
+    ![Question and answers](assets/readme-images/question.jpg)
+
+[Back to table of content](#table-of-content)
+
+- ### Correct answer
+    When the user clicks on the correct answer the button's background turns green and a solid green left border is displayed inside the button. The score is then incremented by one and a sound effect for correct answer is played.
+
+    ![Correct answer](assets/readme-images/correct-answer.jpg)
+
+[Back to table of content](#table-of-content)
+
+- ### Wrong answer
+    If the user clikcs on a wrong answer, the button's background turns red and a solid green left border is displayed inside the correct answer button. The score is not incremented and a sound effect for wrong answer is played.
+
+    ![Wrong answer](assets/readme-images/wrong-answer.jpg)
+
+[Back to table of content](#table-of-content)
+
+- ### View score
+    When the user clicks on an answer on the last round (10), the Next round button changes to View score. This will take the user to the end of the quiz and display the final score.
+
+    ![View score](assets/readme-images/view-score.jpg)
 
 [Back to table of content](#table-of-content)
 
