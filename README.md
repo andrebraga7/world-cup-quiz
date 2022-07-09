@@ -221,16 +221,16 @@ The website was deplyoed to GitHub pages. You can fallow the steps below to depl
 3. Under source, set the Branch to **main** and click on **Save**;
 4. Once the changes are saved, a link to the live website will appear on the top of the page. It may take a few minutes until the website is published.
 
-You can access the GitHub repository by clicking the following link: [https://github.com/andrebraga7/akemi](https://github.com/andrebraga7/akemi)
+You can access the GitHub repository by clicking the following link: [https://github.com/andrebraga7/world-cup-quiz](https://github.com/andrebraga7/world-cup-quiz)
 
-![Deployment](assets/readme-images/deployment.jpg)
+![Deployment](assets/readme-images/deploy.jpg)
 
 [Back to table of content](#table-of-content)
 
 ## To fork the repository on GitHub
 You can create a copy of the repository by forking the GitHub account. This copy can be changed and edited without affecting the original repository. Follow the steps below to fork the repository:
 
-1. Log in to the GitHub account and locate the [repositoty](https://github.com/andrebraga7/akemi);
+1. Log in to the GitHub account and locate the [repositoty](https://github.com/andrebraga7/world-cup-quiz);
 2. On the top right hand side of the page, click the **Fork** button to create a copy of the original repository on your GitHub account.
 
 ![Fork](assets/readme-images/fork.jpg)
