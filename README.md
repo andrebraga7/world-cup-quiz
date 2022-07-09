@@ -1,4 +1,4 @@
-# Akemi Renewable Energies
+# FIFA World Cup Quiz Game
 
 FIFA World Cup Quiz Game, is a fun quiz game about fact of the FIFA World Cup tournaments. It challanges the user by asking different types of questions of every tournament in history. At the same time, the user can learn new unknown facts about the tournaments history and the legendary player throughout the years.
 
@@ -166,11 +166,33 @@ The FIFA World Cup Quiz Game uses a simple user firendly interface designed to c
 
 [Back to table of content](#table-of-content)
 
+## Results
+
+- ### Score and feedback
+    When the quiz ends, the user is presented with the total score and a message depending on the score result. If it's between 0 and 3 it displays a football icon and the text "Here's a football so you can practice!" and plays the sound effect for failure. If the result is between 4 and 7 it shows an airplane icon and the text "You didn't qualify for the final, time to go home!" and plays the sound effect for takeoff. If the score is between 8 and 10 it displays a trophy icon and the text "Congratulations, you won the world cup!" followed by the sound effect for success.
+
+    Score between 0 and 3:
+    ![Score between 0 - 3](assets/readme-images/score1.jpg)
+
+    Score between 4 and 7:
+    ![Score between 4 - 7](assets/readme-images/score2.jpg)
+
+    Score between 8 and 10:
+    ![Score between 8 - 10](assets/readme-images/score3.jpg)
+
+[Back to table of content](#table-of-content)
+
+- ### Options
+    Bellow the results message the user is given three options: **Play again** which will load the quiz again with the same level and randomly shuffled questions, **Choose level** which takes the user back to the level selection and **End game** which will reload the page taking the user back to the initial landing page where he submit a new username if desired.
+
+    ![Options](assets/readme-images/options.jpg)
+
+[Back to table of content](#table-of-content)
+
 ## Future features
 
-- A hamburguer menu for smaller screens;
-- Create an image carousel on each project of the some of our projects section;
-- Add a pop-up display confirmation for when the contact form is submited.
+- Additional levels and questions making the quiz more complex;
+- Integration with a data base to save the results and creation of a user ranking.
 
 [Back to table of content](#table-of-content)
 
