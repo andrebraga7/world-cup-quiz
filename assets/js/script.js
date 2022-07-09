@@ -8,6 +8,7 @@ let audioClick = document.getElementById('audio-click');
 let audioCorrect = document.getElementById('audio-correct');
 let audioWrong = document.getElementById('audio-wrong');
 let audioSuccess = document.getElementById('audio-success');
+let audioTakeoff = document.getElementById('audio-takeoff');
 let audioFailure = document.getElementById('audio-failure');
 
 
@@ -42,7 +43,7 @@ function controls() {
                 default:
                     throw 'Unknown button';
             }
-        })
+        });
     }
 
     // Event listener for the enter key on the username input field.
@@ -50,7 +51,7 @@ function controls() {
         if (event.key === 'Enter') {
             captureUser();
         }
-    })
+    });
 
 }
 
@@ -66,14 +67,14 @@ function soundButton() {
     if (icon.value == 'on') {
         icon.innerHTML = `<i class="fa-solid fa-volume-xmark"></i>`;
         icon.value = "off";
-        icon.ariaLabel = "turn sound on"
+        icon.ariaLabel = "turn sound on";
         for (let audio of audioElements) {
             audio.muted = true;
         }
     } else {
         icon.innerHTML = `<i class="fa-solid fa-volume-high"></i>`;
         icon.value = "on";
-        icon.ariaLabel = "turn sound off"
+        icon.ariaLabel = "turn sound off";
         for (let audio of audioElements) {
             audio.muted = false;
         }
@@ -253,7 +254,7 @@ function runQuiz() {
             let answerClicked = this.getAttribute('data-answer');
             checkAnswer(answerClicked, button, answerButtons);
             buttonStyles(button, answerButtons);
-        })
+        });
     }
 
 }
@@ -361,7 +362,7 @@ function endQuiz() {
     } else if (score > 3 && score < 8) {
         icon = `<i class="fa-solid fa-plane-departure"></i>`;
         message = "You didn't qualify for the final, time to go home!";
-        audioFailure.play();
+        audioTakeoff.play();
     } else {
         icon = `<i class="gold fa-solid fa-trophy"></i>`;
         message = "Congratulations, you won the world cup!";
@@ -411,7 +412,7 @@ function endQuiz() {
                     throw 'Unknown button at endQuiz()';
             }
 
-        })
+        });
     }
 
 }
