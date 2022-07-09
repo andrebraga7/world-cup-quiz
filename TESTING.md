@@ -28,7 +28,12 @@ Below are the CSS validator results:
 
 Below are the JSHint validator results:
 
-![CSS validator results](assets/readme-images/css-validator.jpg)
+- There are 22 functions in this file;
+- Function with the largest signature take 3 arguments, while the median is 0;
+- Largest function has 16 statements in it, while the median is 3.5;
+- The most complex function has a cyclomatic complexity value of 5 while the median is 2.
+
+![CSS validator results](assets/readme-images/jshint.jpg)
 
 # Responsiveness test
 

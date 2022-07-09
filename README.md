@@ -86,6 +86,7 @@ The quiz is composed of four stages, **Landing**, **Level selection**, **Quiz ro
     The font chosen for this project was [Orbitron](https://fonts.google.com/specimen/Orbitron). It has a fall back font of sans-serif. This font was chosen because it has a fun game like feel to it which helps with the user experience of playing a quiz game.
 
 - ### Colour scheme
+
     The colour scheme is bright and fun, the blue resembles the FIFA logo, the green relates to the colour of the football pitch, the purple and gold integrate well with the other two to create a quiz game atmosphere.
 
     ![Colours](assets/readme-images/colors.png)

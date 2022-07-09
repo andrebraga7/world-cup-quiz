@@ -262,7 +262,7 @@ function runQuiz() {
 /**
  * Check the answer and changes the button background color to green or red.
  */
-function checkAnswer(answerClicked, button, answerButtons,) {
+function checkAnswer(answerClicked, button, answerButtons) {
 
     if (answerClicked === 'correct') {
         button.style.backgroundColor = "lightgreen";
