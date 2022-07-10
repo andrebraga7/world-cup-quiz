@@ -107,9 +107,9 @@ The FIFA World Cup Quiz Game uses a simple user firendly interface designed to c
 [Back to table of content](#table-of-content)
 
 - ### Controls
-    Bellow the quiz area there are two controls. The first one is a sound off and on toggle switch and the second button opens and closes the instructions when clicked. These controls remain visible throught the quiz.
+    Bellow the quiz area there are two buttons. The first one is a sound off and on toggle switch and the second button opens and closes the instructions when clicked. These controls remain visible throught the quiz.
 
-    ![Controls](assets/readme-images/controls.jpg)
+    ![Instructions](assets/readme-images/instructions.jpg)
 
 [Back to table of content](#table-of-content)
 

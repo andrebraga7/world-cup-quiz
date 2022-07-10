@@ -240,6 +240,7 @@ footer a {
     #instructions {
         width: 70vw;
         left: 15vw;
+        overflow: auto;
     }
 
     .btn-answer {
@@ -283,11 +284,17 @@ footer a {
         height: 75vh;
         top: 2.5vh;
         left: 2.5vw;
-        overflow: scroll;
+        overflow: auto;
     }
 
     #instructions ul {
         padding: 0 2vw;
+    }
+
+    #instructions-close {
+        position: fixed;
+        top: 4px;
+        right: 4px;
     }
 
     footer {
@@ -313,8 +320,9 @@ footer a {
     }
 
     .btn-answer {
-        height: 8vh;
+        height: 45px;
         width: 95%;
+        padding: 3px 10px;
     }
 
     .btn-green-medium {
@@ -323,4 +331,14 @@ footer a {
         margin-top: 0.5vh;
     }
 
+}
+
+/* Small screen heights bellow 600px high */
+
+@media screen and (max-height: 600px) {
+
+    .quiz-area {
+        height: 390px;
+    }
+    
 }

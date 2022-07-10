@@ -39,13 +39,11 @@ Below are the JSHint validator results:
 
 The responsive design test was carried out manually through [**Google Chrome DevTools**](https://developer.chrome.com/docs/devtools/) and [**Responsive Design Checker**](https://responsivedesignchecker.com/).
 
-|        | Soni Xperia Z2 | Samsung Galaxy S7 | Apple iPhone 7 | Apple iPad Mini | Apple iPad Pro| Display <1024px | Display >1024px |
+|        | Soni Xperia Z2 | Samsung Galaxy S7 | Apple iPhone 7 | Apple iPad Mini | Apple iPad Pro| Display <1200px | Display >1200px |
 |--------|:--------------:|:-----------------:|:--------------:|:---------------:|:-------------:|:----------------:|:----------------:|
 | Render | pass           | pass              | pass           | pass            | pass          | pass             | pass             |
 | Images | pass           | pass              | pass           | pass            | pass          | pass             | pass             |
 | Links  | pass           | pass              | pass           | pass            | pass          | pass             | pass             |
-
-Note: The website has a maximum width of 1440px, this ristrics the content of the site spreading too much on wider displays, providing a better UX.
 
 # Browser compatability
 
