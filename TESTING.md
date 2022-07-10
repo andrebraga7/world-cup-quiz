@@ -52,43 +52,49 @@ The website was tested on a wide range of browsers and didn't present any visual
 # Testing user stories
 
 - As a user I want to understand the purpose of the site straight away;
-    - On the home page, the hero image with a row of solar panels in a field with the header **Renewable energy** and the text bellow inviting the user to get in touch to learn how the company can help achieve the user's energy goals, should allow the user to interprete the main purpose of the website.
+    - The header and layout of the landing page makes it clear to the user that the website is a FIFA World Cup Quiz game.
 
-- As a user I want to be able to navigate through the whole site easily;
-    - There is a **navigation menu** on the top of every page with links to all the pages;
-    - On every page there is a footer with a second **menu** with links to all the pages.
+- As a user I want to have a personalized experience;
+    - The username input field allows the user to customize his username and have it displayed throught the quiz.
 
-- As a user I want to know how other customers experiences has been working with Akemi;
-    - At the bottom of the home page there is a **Testimonials** section with feedback from other customers experiences.
+- As a user I want to be able to have control of any media playback;
+    - The **sound** toggle button allows the user to switch the sound effects off and on.
 
-- As a user I want to connect with Akemi on social media;
-    - On the footer in every page there are links to all of Akemis **social media pages**.
+- As a user I want to read any relevant instructions for the quiz;
+    - The **instructions** button allows the user to view the quiz instrusctions at any given point.
 
-- As a user I want to know more about Akemi;
-    - On the about page, there is a section with an **introduction about** Akemi.
+- As a user I want to select different levels of difficulty;
+    - The **level selection** stage aks the user to select from different level of difficulty;
+    - At the end of the quiz, the user is given an option to select a new level.
 
-- As a user I want to see portfolio projects from Akemi;
-    - At the bottom of the about page, there is a section with some of Akemi's **completed projects**.
+- As a user I want to know how I'm progressing in the rounds;
+    - The **game info** area shows the user's score, the current round and the number of total rounds in the quiz.
 
-- As a user I want to easily be able to contact Akemi for more information.
-    - On the contact page there is a form which allows the user to fill in his contact information and send Akemi a message;
-    - On the footer in every page there is also **contact information** for the company, such as: telephone, email and address.
+- As a user I want to know if the selected answer is correct and if not which one was the right one;
+    - When an **answer** is clicked, the user is presented with a visual and audio feedback is the sleected answer was right or wrong;
+    - It also shows the user what the correct answer was by displaying a solid green left border on the correct answer.
+
+- As a user I want to see my score at the end of the quiz and have feedback on how I did;
+    - At the end of the quiz the user is presented with the score and is given a different feedback depending on the score 0 to 3, 4 to 7 and 8 to 10.
+
+- As a user I want to have options to play again, select a new level or leave the quiz.
+    - At the end of the quiz, the user can select from three different buttons: **Play again**, **Choose level** and **End game**.
 
 # Known bugs
 
 - ## Resolved
-    - During the validation check, two errors were found on the home page. Below is a quick description and the fix used:
+    - During the validation check minor erros were found in the Java Script code with some missing semicolons. This was easily fixed by adding the missing semicolons;
 
-        ![Bugs found](assets/readme-images/bugs.jpg)
-        
-        Both errors were related to the same problem. This was easily fixed by removing the \<button> element, and styling the \<a> element as a button.
+    - Adjustments were made during the responsive design test to better fit contents of the quiz for smaller screens with a max width and height of 600px;
 
-    - A position change was done on the cover image of the about page in order to improve the visibility of some elements that were being clipped on smaller screens.
+    - The next round button let the user go to the next round without selecting an answer. This was easily fized by moving the next round button event listener to the checkAnswer() function so it would only be clickable after selecting and answer;
 
-    - During the lighthouse test, an accessibility recomendation was found: to change the background colour of the book a call button on the cover text of the home page to improve contrast. After the colour change, the accessibility result was improved.
+    - The username input field had no validation. A maxlenght attribute was added to the username input element and a regular expression was added so it could be used to validade the user input, allowing only alphanumeric characters and underline, with at leat one alphabet and min of 2 and max of 15 characters;
+
+    - The control's button (sound and instructions) where throwind an unknown button message on the endQuiz() stage. This was fixed by changing the options button identifiers to a querySelectorAll data-options instead of the button element.
 
 - ## Unresolved
-    - The data from the form on the contact page doesn't push anywhere. This is due to the limitations of this portfolio project. However it can easily be fixed for a live version of the website.
+    - There are currently no known bugs and issues.
 
 # Aditional testing
 
@@ -100,12 +106,12 @@ The website was also tested using [**Google Lighthouse**](https://developers.goo
 - Best practices - website conformity to industry best practices;
 - SEO - Search Engine Optimizationhow, how the website is optimized for search engine results and ranking.
 
-    Here are the results achieved for the Akemi website in Lighthouse:
+    Here are the results achieved in Lighthouse:
 
     ![Lighthouse results](assets/readme-images/lighthouse.jpg)
 
 ## Peer review
 
-The website also whent throught some peer reviews, both in the software development field and outside by other users. In general the reviews were positive, with some minor adjustments needed in some responsive design, which were easily fixed within the CSS. There were some minor grammar and speeling errors that were also fixed.
+The quiz game also whent throught some peer reviews, both in the software development field and outside by other users. In general the reviews were positive, with users having a fun experience, leraning new facts. The code was seen to be clean and tidy by other software developers.
 
 Back to [**README file.**](README.md)
