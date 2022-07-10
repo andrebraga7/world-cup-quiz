@@ -262,14 +262,15 @@ footer a {
     .quiz-area {
         height: 65vh;
         width: 95vw;
+        overflow: auto;
     }
 
     .quiz-area h2 {
-        padding: 10vh 5vw;
+        padding: 7vh 5vw;
     }
 
     #question {
-        padding: 5vh 5vw;
+        padding: 2vh 3vw;
     }
 
     #controls {
@@ -287,6 +288,10 @@ footer a {
 
     #instructions ul {
         padding: 0 2vw;
+    }
+
+    footer {
+        margin-top: 2vh;
     }
 
     #end-game-h2 {
@@ -308,13 +313,14 @@ footer a {
     }
 
     .btn-answer {
+        height: 8vh;
         width: 95%;
     }
 
     .btn-green-medium {
         height: 6vh;
         width: 80%;
-        margin-top: 2vh;
+        margin-top: 0.5vh;
     }
 
 }
