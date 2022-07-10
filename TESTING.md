@@ -93,6 +93,8 @@ The website was tested on a wide range of browsers and didn't present any visual
 
     - The control's button (sound and instructions) where throwind an unknown button message on the endQuiz() stage. This was fixed by changing the options button identifiers to a querySelectorAll data-options instead of the button element.
 
+    - Text color inside buttons not displaying correctly in iOS. Fixed by specifying color value in css for the button.
+
 - ## Unresolved
     - There are currently no known bugs and issues.
 
