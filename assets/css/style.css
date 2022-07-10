@@ -325,10 +325,22 @@ footer a {
         padding: 3px 10px;
     }
 
+    .btn-answer:hover {
+        background-color: #dbdbdb;
+    }
+
     .btn-green-medium {
         height: 6vh;
         width: 80%;
         margin-top: 0.5vh;
+    }
+
+    .btn-green-medium:hover {
+        box-shadow: none;
+    }
+
+    .btn-green:hover {
+        box-shadow: none;
     }
 
 }
