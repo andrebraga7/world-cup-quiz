@@ -7,6 +7,10 @@ FIFA World Cup Quiz Game, is a fun quiz game about fact of the FIFA World Cup to
 1. Create a quiz game that will challenge the user in different levels of knowledge about the tournament;
 2. Teach the user new facts about the FIFA World Cup;
 
+### Target audiences
+
+- Football fans between the ages of 20 and 65 that follow the World Cup tournaments and are familiar with the basic tournament history and facts.
+
 You can follow the project along by visiting the [FIFA World Cup Quiz Game here](https://andrebraga7.github.io/world-cup-quiz)
 
 ![Website responsive design](assets/readme-images/responsive-design.jpg)
