@@ -49,7 +49,7 @@ header > h1 > i {
 
 #username {
     display: block;
-    margin: 3vh auto 0;
+    margin: 3vh auto;
     height: 50px;
     width: 250px;
     padding: 5px 10px;
@@ -59,9 +59,8 @@ header > h1 > i {
 }
 
 #empty-username {
-    visibility: hidden;
+    display: none;
     color: red;
-    padding: 1vh;
 }
 
 /* controls */
@@ -88,7 +87,7 @@ header > h1 > i {
     z-index: 1;
 }
 
-#instructions h2, p {
+#instructions h2 {
     padding: 0 0 2vh;
 }
 
@@ -218,6 +217,8 @@ footer a {
     right: 4px;
 }
 
+/* MEDIA QUERIES */
+
 /* Large to medium screen sizes */
 
 @media screen and (max-width: 1200px) {
@@ -346,7 +347,7 @@ footer a {
 
 }
 
-/* Small screen heights bellow 600px high */
+/* Small screen heights bellow 600px */
 
 @media screen and (max-height: 600px) {
 

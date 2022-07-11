@@ -122,7 +122,7 @@ function captureUser() {
     if (testPattern()) {
         chooseLevel();
     } else {
-        document.getElementById('empty-username').style.visibility = "visible";
+        document.getElementById('empty-username').style.display = "block";
     }
 
     audioClick.play();
